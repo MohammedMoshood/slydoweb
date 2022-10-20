@@ -21,7 +21,7 @@ const HeroSection = () => {
       <HeroContainer>
         <HeroLeft>
           <HeroH>
-            we are a social technology that <br />
+            We are a social technology that <br />
             helps people connect,
             <br />
             and grow businesses.

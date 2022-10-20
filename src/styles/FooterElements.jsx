@@ -16,14 +16,22 @@ export const FooterContainer = styled.div`
   justify-content: flex-end;
   display: flex;
   flex-direction: column;
-  width: 1190px;
+  max-width: 1190px;
+  width: 100%;
   height: 100%;
+  @media screen and (max-width: 768px) {
+  justify-content: flex-start;
+  }
 `;
 export const MenuWrapper = styled.div`
   gap: 170px;
   height: 85%;
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 768px) {
+   flex-direction: column;
+   gap: 60px;
+  }
 `;
 
 export const SlydoDiv = styled.div`
@@ -33,6 +41,9 @@ export const SlydoDiv = styled.div`
   align-items: center;
   width: 90px;
   height: 50px;
+  @media screen and (max-width: 768px) {
+  
+  }
 `;
 
 export const SlydoImg = styled.img`
@@ -43,9 +54,11 @@ export const SlydoImg = styled.img`
 export const MenuDiv = styled.div`
   display: flex;
   flex-direction: row;
-  width: 840px;
+  max-width: 840px;
+  width: 100%;
   height: 100%;
-  gap: 40px;
+  /* gap: 40px; */
+  justify-content: space-between;
 `;
 export const AboutMenu = styled.div`
   padding: 10px;
@@ -73,6 +86,9 @@ export const WebflowMenu = styled.div`
   list-style: none;
   gap: 25px;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+   display: none;
+  }
 `;
 export const SocialMenu = styled.ul`
   padding: 10px;
@@ -82,6 +98,9 @@ export const SocialMenu = styled.ul`
   height: 100%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+   display: none;
+  }
 `;
 export const MenuHeader = styled.h5`
   font-family: "DM Sans";
@@ -112,11 +131,15 @@ export const MenuLink = styled(Link)`
 `;
 
 export const BottomLineDiv = styled.div`
-  width: 1190px;
+  max-width: 1190px;
+  width: 100%;
   height: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 768px) {
+   display: none;
+  }
 `;
 
 export const SlydoInc = styled.h5`

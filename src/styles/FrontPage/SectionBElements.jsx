@@ -9,6 +9,9 @@ export const SectionDiv = styled.div`
   width: 100%;
   max-width: 1680px;
   height: 550px;
+  @media screen and (max-width:768px) {
+    display: none;
+  }
 `;
 export const SectionBContainer = styled.div`
   display: flex;

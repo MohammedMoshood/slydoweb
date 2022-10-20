@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Link as LinkRouter } from "react-router-dom";
-import {FaAngleDown} from "react-icons/fa"
+// import { Link as LinkRouter } from "react-router-dom";
+import { FaAngleDown, FaBars } from "react-icons/fa";
 
 export const Nav = styled.nav`
   display: flex;
@@ -10,6 +10,10 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 1680px;
   height: 103px;
+  @media screen and (max-width: 768px) {
+    height: 50px;
+    padding: 10px 0;
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -21,6 +25,9 @@ export const NavContainer = styled.div`
   max-width: 1400px;
   width: 84%;
   height: 55px;
+  @media screen and (max-width: 768px) {
+    height: 40px;
+  }
 `;
 
 export const NavLeft = styled.div`
@@ -34,8 +41,11 @@ export const NavLeft = styled.div`
 `;
 
 export const SLydoLogo = styled.img`
-    height: 43px;
-`
+  height: 43px;
+  @media screen and (max-width: 768px) {
+    height: 30px;
+  }
+`;
 
 export const NavCenter = styled.div`
   display: flex;
@@ -46,32 +56,35 @@ export const NavCenter = styled.div`
   gap: 16px;
   width: 438px;
   height: 43px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const NavItem = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-width: 80px;
-height: 32px;
-border-radius: 5px;
-cursor: pointer;
-transition: all 0.3s ;
-justify-content:center;
+  width: 80px;
+  height: 32px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  justify-content: center;
 
-&:hover{
-    background: #F8F8F8;
-}
-`
+  &:hover {
+    background: #f8f8f8;
+  }
+`;
 
-export const NavLink = styled(LinkRouter)`
-text-decoration: none;
-color: black;
-font-size: 13px;
-`
+export const NavLink = styled.a`
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+`;
 export const Arrow = styled(FaAngleDown)`
-   font-size: 10px;
-`
+  font-size: 10px;
+`;
 
 export const NavRight = styled.div`
   display: flex;
@@ -83,28 +96,51 @@ export const NavRight = styled.div`
   height: 54.99px;
 `;
 
-export const Download = styled.button`
-color: #fff;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px 16px;
-gap: 10px;
-cursor: pointer;
-width: 110px;
-height: 32px;
-border: none;
-background: #3F61DB;
-border-radius: 6px;
-transition: all 0.3s ;
-font-family: "Inter";
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 100%;
+export const MenuDiv = styled.button`
+  display: none;
+  @media screen and (max-width: 768px) {
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #3f61db;
+    border-radius: 15px;
+    &:hover {
+      background: #94b0dc;
+    }
+  }
+`;
+export const MenuBars = styled(FaBars)``;
 
-&:hover{
-    background:#7185a6;
-}
-`
+export const Download = styled.button`
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  cursor: pointer;
+  width: 110px;
+  height: 32px;
+  border: none;
+  background: #3f61db;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 100%;
+
+  &:hover {
+    background: #7185a6;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;

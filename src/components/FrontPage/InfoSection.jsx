@@ -23,7 +23,7 @@ const InfoSection = () => {
             that matter
           </InfoH>
           <InfoP>
-            Send photos and videos on Slydo instantly. You can even <br />{" "}
+            Send photos and videos on Slydo instantly. You can even 
             capture the moments that matter to yo the most with a built-in
             camera
           </InfoP>

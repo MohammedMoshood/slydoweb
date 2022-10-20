@@ -8,25 +8,40 @@ export const Info = styled.div`
   isolation: isolate;
   max-width: 1680px;
   width: 100%;
+  /* padding: 20px 0px; */
   height: 600px;
   justify-content: flex-end;
   background: #e5eafe;
+  @media screen and (max-width: 768px) {
+    height: 1000px;
+    padding-top: 40px;
+  }
 `;
 
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 1050px;
+  width: 100%;
+  max-width: 1050px;
   height: 500px;
-  
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+    width: 84%;
+  }
 `;
 export const InfoLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px;
   gap: 16px;
-  width: 560px;
+  max-width: 1000px;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    height: 400px;
+  }
 `;
 export const InfoH = styled.h2`
   width: 600px;
@@ -36,6 +51,12 @@ export const InfoH = styled.h2`
   font-weight: 500;
   font-size: 50px;
   line-height: 110%;
+  @media screen and (max-width: 768px) {
+    line-height: 130%;
+    width: 350px;
+    font-size: 30px;
+    height: 80px;
+  }
 `;
 export const InfoP = styled.p`
   width: 530px;
@@ -46,6 +67,13 @@ export const InfoP = styled.p`
   font-size: 18px;
   line-height: 180%;
   color: #1a191e;
+  @media screen and (max-width: 768px) {
+    margin-top: 0px;
+    width: 400px;
+    font-size: 16px;
+    height: 100px;
+    word-break: keep-all;
+  }
 `;
 export const InfoDiv = styled.div`
   display: flex;
@@ -55,6 +83,11 @@ export const InfoDiv = styled.div`
   gap: 22px;
   width: 380px;
   height: 120px;
+  @media screen and (max-width: 768px) {
+    width: 400px;
+    height: 120px;
+    gap: 15px;
+  }
 `;
 export const SingleInfo = styled.div`
   width: 320px;
@@ -82,13 +115,27 @@ export const InfoText = styled.p`
   font-weight: 500;
   font-size: 14px;
   margin-left: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 export const InfoRight = styled.div`
- margin-left: 50px ;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
 export const Img = styled.img`
-height: 500px;
-border-top-left-radius: 40px;
-border-top-right-radius: 40px;
-`
+  height: 500px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  @media screen and (max-width: 768px) {
+    height: 580px;
+  }
+`;
