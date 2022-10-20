@@ -27,7 +27,7 @@ const HeroSection = () => {
             and grow businesses.
           </HeroH>
           <HeroP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing 
             elit, sed do eiusmod tempor incididunt ut labore.
           </HeroP>
           <FeaturesDiv>

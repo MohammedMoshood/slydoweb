@@ -10,7 +10,6 @@ export const Hero = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px 0px;
-  /* background: blue; */
   isolation: isolate;
   @media screen and (max-width: 768px) {
     height: 1200px;
@@ -21,20 +20,17 @@ export const HeroContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* padding: 20px; */
   position: absolute;
   width: 100%;
   max-width: 1050px;
   height: 917px;
-  top: 100px;
-  /* background: red; */
+top: 100px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
     height: auto;
     position: initial;
     width: 84%;
-    /* justify-content: flex-start; */
     align-items: flex-start;
   }
 `;
@@ -43,15 +39,11 @@ export const HeroLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* padding: 0px; */
   max-width: 1000px;
   width: 100%;
   height: 500px;
-  /* background: pink; */
   @media screen and (max-width: 768px) {
     height: 400px;
-    /* margin-top: -100px; */
-    /* width: 400px; */
   }
 `;
 export const HeroH = styled.h2`
@@ -82,9 +74,13 @@ export const HeroP = styled.p`
   color: #1a191e;
   @media screen and (max-width: 768px) {
     margin-top: 0px;
-    width: 400px;
+    width: 100%;
     font-size: 16px;
-    word-break: break-all;
+    word-break: keep-all;
+  }
+  @media screen and (max-width:480px) {
+    margin: 10px 0 ;
+  
   }
 `;
 
@@ -97,9 +93,11 @@ export const FeaturesDiv = styled.div`
   height: 80px;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    width: 400px;
-    height: 70px;
+    width: 100%;
+    height: auto;
   }
+
+
 `;
 export const SingleFeature = styled.div`
   width: 250px;
@@ -110,6 +108,9 @@ export const SingleFeature = styled.div`
   align-items: center;
   @media screen and (max-width: 768px) {
     width: 180px;
+  }
+  @media screen and (max-width: 480px) {
+   height: 30px;
   }
 `;
 export const TickDiv = styled.div`
@@ -153,10 +154,11 @@ export const ButtonDiv = styled.div`
   height: 52px;
 
   @media screen and (max-width: 768px) {
-    /* margin-left: 6%; */
     margin-top: 20px;
     justify-content: center;
+    
   }
+
 `;
 export const StoreButton = styled.button`
   display: flex;

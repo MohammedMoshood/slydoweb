@@ -8,13 +8,12 @@ export const Info = styled.div`
   isolation: isolate;
   max-width: 1680px;
   width: 100%;
-  /* padding: 20px 0px; */
   height: 600px;
   justify-content: flex-end;
   background: #e5eafe;
   @media screen and (max-width: 768px) {
-    height: 1000px;
-    padding-top: 40px;
+    height: auto;
+    padding-top: 30px;
   }
 `;
 
@@ -40,7 +39,6 @@ export const InfoLeft = styled.div`
   width: 100%;
   @media screen and (max-width: 768px) {
     justify-content: center;
-    height: 400px;
   }
 `;
 export const InfoH = styled.h2`
@@ -68,11 +66,13 @@ export const InfoP = styled.p`
   line-height: 180%;
   color: #1a191e;
   @media screen and (max-width: 768px) {
-    margin-top: 0px;
-    width: 400px;
+    width: 100%;
     font-size: 16px;
     height: 100px;
     word-break: keep-all;
+  }
+  @media screen and (max-width: 480px) {
+    height: 120px;
   }
 `;
 export const InfoDiv = styled.div`
@@ -85,7 +85,7 @@ export const InfoDiv = styled.div`
   height: 120px;
   @media screen and (max-width: 768px) {
     width: 400px;
-    height: 120px;
+    height: 130px;
     gap: 15px;
   }
 `;
@@ -116,7 +116,7 @@ export const InfoText = styled.p`
   font-size: 14px;
   margin-left: 20px;
   @media screen and (max-width: 768px) {
-    font-size: 10px;
+    font-size: 13px;
   }
 `;
 
@@ -130,6 +130,10 @@ export const InfoRight = styled.div`
     flex-direction: column;
     justify-content: flex-end;
   }
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    height: fit-content;
+  }
 `;
 export const Img = styled.img`
   height: 500px;
@@ -137,5 +141,8 @@ export const Img = styled.img`
   border-top-right-radius: 40px;
   @media screen and (max-width: 768px) {
     height: 580px;
+  }
+  @media screen and (max-width: 480px) {
+    height: 500px;
   }
 `;

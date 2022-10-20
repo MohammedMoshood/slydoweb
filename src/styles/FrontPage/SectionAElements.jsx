@@ -23,7 +23,6 @@ export const SavingsContainer = styled.div`
   height: 550px;
   @media screen and (max-width: 768px) {
     height: auto;
-    padding:30px;
   }
 `;
 export const TextContainer = styled.div`
@@ -31,10 +30,10 @@ export const TextContainer = styled.div`
   flex-direction: column;
   height: 230px;
   width: 1050px;
-  padding: 20px;
+  padding: 30px;
   gap: 16px;
   @media screen and (max-width: 768px) {
-    width: 400px;
+    width: 100%;
     height: 300px;
   }
 `;
@@ -46,7 +45,6 @@ export const TopLine = styled.h5`
   line-height: 120%;
   letter-spacing: -0.03em;
   color: #1a191e;
-
 `;
 export const SavingsH = styled.h4`
   color: #1a191e;
@@ -56,7 +54,6 @@ export const SavingsH = styled.h4`
   letter-spacing: -0.03em;
   font-size: 50px;
   line-height: 110%;
-
 `;
 export const SavingsP = styled.p`
   width: 500px;
@@ -69,6 +66,9 @@ export const SavingsP = styled.p`
   @media screen and (max-width: 768px) {
     width: 400px;
   }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const AllDiv = styled.div`
@@ -79,8 +79,8 @@ export const AllDiv = styled.div`
   justify-content: flex-end;
   align-items: center;
   @media screen and (max-width: 768px) {
-   justify-content: center;
-   height: 60px;
+    justify-content: center;
+    height: 60px;
   }
 `;
 export const AllFeatures = styled.button`
@@ -114,7 +114,7 @@ export const CardWrapper = styled.div`
   padding: 20px;
   gap: 15px;
   @media screen and (max-width: 768px) {
-    flex-direction:  column;
+    flex-direction: column;
     height: auto;
     align-items: center;
     gap: 20px;
