@@ -24,7 +24,7 @@ export const HeroContainer = styled.div`
   width: 100%;
   max-width: 1050px;
   height: 917px;
-top: 100px;
+  top: 100px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -78,9 +78,8 @@ export const HeroP = styled.p`
     font-size: 16px;
     word-break: keep-all;
   }
-  @media screen and (max-width:480px) {
-    margin: 10px 0 ;
-  
+  @media screen and (max-width: 480px) {
+    margin: 10px 0;
   }
 `;
 
@@ -96,8 +95,6 @@ export const FeaturesDiv = styled.div`
     width: 100%;
     height: auto;
   }
-
-
 `;
 export const SingleFeature = styled.div`
   width: 250px;
@@ -110,7 +107,7 @@ export const SingleFeature = styled.div`
     width: 180px;
   }
   @media screen and (max-width: 480px) {
-   height: 30px;
+    height: 30px;
   }
 `;
 export const TickDiv = styled.div`
@@ -156,9 +153,7 @@ export const ButtonDiv = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: 20px;
     justify-content: center;
-    
   }
-
 `;
 export const StoreButton = styled.button`
   display: flex;
@@ -207,7 +202,6 @@ export const PhoneImg = styled.img`
   object-fit: contain;
   @media screen and (max-width: 768px) {
     margin-top: 15px;
-  
     height: 720px;
   }
 `;

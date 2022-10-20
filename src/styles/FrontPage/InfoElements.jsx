@@ -130,7 +130,7 @@ export const InfoRight = styled.div`
     flex-direction: column;
     justify-content: flex-end;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     justify-content: center;
     height: fit-content;
   }

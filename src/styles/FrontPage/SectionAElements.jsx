@@ -30,11 +30,11 @@ export const TextContainer = styled.div`
   flex-direction: column;
   height: 230px;
   width: 1050px;
-  padding: 30px;
   gap: 16px;
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 300px;
+    padding: 30px;
   }
 `;
 export const TopLine = styled.h5`
