@@ -1,6 +1,7 @@
 import styled from "styled-components";
 // import { Link as LinkRouter } from "react-router-dom";
 import { FaAngleDown, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   display: flex;
@@ -10,6 +11,7 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 1680px;
   height: 103px;
+  background: white;
   @media screen and (max-width: 768px) {
     height: 50px;
     padding: 10px 0;
@@ -17,10 +19,8 @@ export const Nav = styled.nav`
     justify-content: center;
     top: 0;
     z-index: 10;
-    background: white;
-    border-bottom: 1px dashed #3F61DB;
-  
-;
+
+    border-bottom: 1px dashed #3f61db;
   }
 `;
 
@@ -96,9 +96,10 @@ export const Arrow = styled(FaAngleDown)`
 
 export const NavRight = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
   padding: 0px;
   width: 400px;
   height: 54.99px;
@@ -124,7 +125,7 @@ export const MenuDiv = styled.button`
 `;
 export const MenuBars = styled(FaBars)``;
 
-export const Download = styled.button`
+export const Download = styled(Link)`
   color: #fff;
   display: flex;
   flex-direction: row;
@@ -133,6 +134,7 @@ export const Download = styled.button`
   padding: 12px 16px;
   gap: 10px;
   cursor: pointer;
+  outline: 0;
   width: 110px;
   height: 32px;
   border: none;
@@ -147,6 +149,8 @@ export const Download = styled.button`
 
   &:hover {
     background: #7185a6;
+  color: #fff;
+    
   }
   @media screen and (max-width: 768px) {
     display: none;

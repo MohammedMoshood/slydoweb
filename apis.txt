@@ -1,0 +1,115 @@
+base_url = "https://api.slydo.co"
+
+# Authentication
+authenticate = "[GET] /api/v1/user/auth/get-token/"
+########################################
+# {                                    #
+#   "phone_number": "{{phoneNumber}}", #
+#   "password":"{{password}}"          #
+# }                                    #
+########################################
+
+
+refresh_token = "[GET] /api/v1/user/auth/refresh-token/"
+######################################
+# {                                  #
+#   "refresh": "{{refreshToken}}"    #
+# }                                  #
+######################################
+
+# User
+find_user = "[GET] /api/v1/search/users/?search=<username>/"
+user_address = "[GET, POST] /api/v1/user/address/"
+user_avatar = "[GET, PATCH] /api/v1/user/update-avatar/<username>/"
+list_contacts = "[GET] /api/v1/user/contacts/"
+block_user_from_contact = "[PATCH] /api/v1/user/contacts/block-contact/"
+unblock_user = "[PATCH] /api/v1/user/contacts/unblock-contact/"
+remove_user_from_contact = "[PATCH] /api/v1/user/contacts/remove-from-contact/"
+list_contact_requests = "[GET] /api/v1/user/contact-request/"
+accept_contact_request = "[PATCH] /api/v1/user/contact-request/accept/"
+cancel_or_reject_contact_request = "[PATCH] /api/v1/user/contact-request/cancel-or-reject/"
+list_blocked_user = "[GET] /api/v1/user/contacts/list-block-contact/"
+
+# Staff
+staff = "[GET, POST] /api/v1/user/staff/"
+process_staff = "[GET, PATCH, DELETE] /api/v1/user/staff/<id>/"
+
+# Terms and Conditions
+update_terms_and_conditions = "[GET, PATCH] /api/v1/user/customer/terms-and-conditions/<username>/"
+preview_terms_and_conditions = "[GET] /api/v1/user/customer/terms-and-conditions/<id>/"
+
+# Merchant
+get_merchant_store = "[GET] /api/v1/user/customer/<merchant_username>/"
+get_account_balance = "[GET] /api/v1/transactions/check-account-balance/"
+
+# Blog Posts
+get_or_update_post_detail = "[GET, PATCH] /api/v1/social/posts/<id>/"
+get_posts_by_username = "[GET] /api/v1/social/posts/user/<username>/"
+blog_post = "[GET, POST] /api/v1/social/posts/"
+upload_inline_media = "[POST] /api/v1/social/posts/blog-post-inline-media-file/"
+
+# Messages
+send_message = "[POST] /api/v1/messaging/send/"
+get_messages = "[GET] /api/v1/messaging/list/<msg_type>/"
+read_message = "[GET] /api/v1/messaging/read/<id>/"
+delete_message = "[DELETE] /api/v1/messaging/delete/<id>/"
+update_message = "[PATCH] /api/v1/messaging/update/<id>/<action>/" # action = ( "archive", "unarchive", "star", "unstar",)
+
+# Orders
+list_orders = "[GET] /api/v1/order/"
+get_order = "[GET] /api/v1/order/<id>/"
+update_order_status = "[PATCH] /api/v1/order/<id>/update-status/"
+
+# Product & Services
+product = "[GET, POST] /api/v1/products/"
+service = "[GET, POST] /api/v1/services/"
+process_product = "[GET, PATCH, DELETE] /api/v1/products/<id>/"
+process_service = "[GET, PATCH, DELETE] /api/v1/services/<id>/"
+list_merchant_products = "[GET] /api/v1/products/by-seller/<username>/"
+list_provider_services = "[GET] /api/v1/services/by-provider/<username>/"
+delete_product_or_services_image = "[DELETE] /api/v1/images/<id>/"
+get_service_by_id = "[GET] /api/v1/services/retrieve-service/<id>/"
+get_product_by_id = "[GET] /api/v1/products/retrieve-product/<id>/"
+search_service = "[GET] /api/v1/services/search/<id>/?q=<query_param>/"
+search_product = "[GET] /api/v1/products/search/<id>/?q=<query_param>/"
+
+# Invoice
+invoice = "[GET, POST] /api/v1/transactions/invoice/"
+process_invoice = "[GET, PATCH, DELETE] /api/v1/transactions/invoice/<id>/"
+download_invoice = "[GET] /api/v1/transactions/invoice/download/<id>/"
+
+# Payment Contracts
+payment_contract = "[GET, POST] /api/v1/transactions/payment-contract/"
+process_payment_contract = "[GET, PATCH, DELETE] /api/v1/transactions/payment-contract/<id>/"
+download_payment_contract = "[GET] /api/v1/transactions/payment-contract/download/<id>/?download=true"
+
+# Payment Requests
+payment_requests = "[GET] /api/v1/transactions/request-payment/<id>/"
+create_payment_request = "[POST] /api/v1/transactions/request-payment/create/"
+list_payment_requests = "[GET] /api/v1/transactions/request-payment/list/"
+update_payment_request = "[PATCH] /api/v1/transactions/request-payment/update/<id>/"
+
+# Payouts
+payout = "[GET, POST] /api/v1/transactions/payout/"
+
+# Payment
+filter_transactions = "[GET] /api/v1/transactions/transaction-filter/?week=<week>/"
+
+# Transactions
+make_payment = "[POST] /api/v1/transactions/make-payment/"
+list_transactions = "[GET] /api/v1/transactions/list/"
+
+# Bank account
+list_bank_accounts = "[GET] /api/v1/transactions/bank-accounts-list/"
+create_bank_account = "[POST] /api/v1/transactions/add-bank-account/"
+set_default_bank_account = "[PATCH] /api/v1/transactions/set-default-bank-account/<id>/"
+delete_bank_account = "[DELETE] /api/v1/transactions/delete-bank-account/<id>/"
+
+# Developer
+webhooks = "[GET, POST] /api/v1/transactions/webhook/"
+process_webhooks = "[GET, PATCH, DELETE] /api/v1/transactions/webhook/<id>/"
+developer_auth_token = "[GET, POST] /api/v1/user/developer-auth-token/"
+
+# Shipping
+shipping = "[GET, POST] /api/v1/shipping-options/"
+process_shipping = "[GET, PATCH, DELETE] /api/v1/shipping-options/<id>/"

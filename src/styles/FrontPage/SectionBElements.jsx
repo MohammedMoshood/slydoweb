@@ -9,6 +9,8 @@ export const SectionDiv = styled.div`
   width: 100%;
   max-width: 1680px;
   height: 550px;
+  background: white;
+
   @media screen and (max-width:768px) {
     display: none;
   }
@@ -116,7 +118,7 @@ export const Button = styled.button`
   padding: 10px;
   font-family: "Inter";
   gap: 10px;
-  font-size: 10px;
+  font-size: 9px;
   border: none;
   width: 145px;
   height: 50px;
@@ -125,10 +127,16 @@ export const Button = styled.button`
   cursor: pointer;
   text-align: left;
   transition: all 0.5s;
+  text-transform: uppercase;
   &:hover {
     background: #2ACE79;
   }
 `;
+export const StoreLinks = styled.p`
+text-transform: none;
+  font-family: "Inter";
+  font-size: 15px;
+`
 
 export const SectionBRight = styled.div`
   display: flex;

@@ -10,9 +10,12 @@ import {
   Download,
   NavItem,
   NavLink,
-  Arrow , MenuDiv , MenuBars
+  Arrow,
+  MenuDiv,
+  MenuBars,
 } from "../styles/NavbarElements";
-const Navbar = () => {
+
+const Navbar = ({ showModal, toggleModalTrue }) => {
   return (
     <Nav>
       <NavContainer>
@@ -20,15 +23,30 @@ const Navbar = () => {
           <SLydoLogo src={Logo} alt="Slydo" />
         </NavLeft>
         <NavCenter>
-            <NavItem><NavLink to="">Features</NavLink></NavItem>
-            <NavItem><NavLink to="">Compare <Arrow/></NavLink></NavItem>
-            <NavItem><NavLink target="_blank" href="https://developer.slydo.co" >Developers</NavLink></NavItem>
-            <NavItem><NavLink to="">Blog <Arrow/></NavLink></NavItem>
+          <NavItem>
+            <NavLink to="">Features</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="">
+              Compare <Arrow />
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink target="_blank" href="https://developer.slydo.co">
+              Developers
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="">
+              Blog <Arrow />
+            </NavLink>
+          </NavItem>
         </NavCenter>
         <NavRight>
-          <Download>Download App</Download>
+          <Download onClick={toggleModalTrue}>Download App</Download>
+          <Download to={`${process.env.PUBLIC_URL}/auth-login`} >Login</Download>
           <MenuDiv>
-            <MenuBars/>
+            <MenuBars />
           </MenuDiv>
         </NavRight>
       </NavContainer>

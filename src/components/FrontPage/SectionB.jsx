@@ -15,6 +15,7 @@ import {
   ButtonDiv,
   Button,
   CreditImage,
+  StoreLinks
 } from "../../styles/FrontPage/SectionBElements";
 import Img from "../../images/CreditImg.png"
 
@@ -62,13 +63,13 @@ const SectionB = () => {
             <Button>
               <FaApple size={24} />
               <div>
-                Download on the <br /> <h2>App Store</h2>
+                Download on the <br /> <StoreLinks>App Store</StoreLinks>
               </div>
             </Button>
             <Button>
               <FaGooglePlay size={24} />
               <div>
-                GET IT ON <br /> <h2>Google Play</h2>
+                GET IT ON <br /> <StoreLinks>Google Play</StoreLinks>
               </div>
             </Button>
           </ButtonDiv>

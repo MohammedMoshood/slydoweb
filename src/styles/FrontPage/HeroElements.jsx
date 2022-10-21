@@ -11,6 +11,7 @@ export const Hero = styled.div`
   align-items: center;
   padding: 20px 0px;
   isolation: isolate;
+  background: white;
   @media screen and (max-width: 768px) {
     height: 1200px;
   }
@@ -198,7 +199,7 @@ export const HeroRight = styled.div`
 `;
 
 export const PhoneImg = styled.img`
-  height: 750px;
+  height: 1000px;
   object-fit: contain;
   @media screen and (max-width: 768px) {
     margin-top: 15px;
