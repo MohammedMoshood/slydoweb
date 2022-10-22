@@ -35,7 +35,7 @@ export const TextContainer = styled.div`
   gap: 16px;
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 300px;
+    height: auto;
     padding: 30px;
   }
 `;
@@ -56,6 +56,7 @@ export const SavingsH = styled.h4`
   letter-spacing: -0.03em;
   font-size: 50px;
   line-height: 110%;
+  
 `;
 export const SavingsP = styled.p`
   width: 500px;

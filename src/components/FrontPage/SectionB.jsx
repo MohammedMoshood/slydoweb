@@ -15,9 +15,9 @@ import {
   ButtonDiv,
   Button,
   CreditImage,
-  StoreLinks
+  StoreLinks,
 } from "../../styles/FrontPage/SectionBElements";
-import Img from "../../images/CreditImg.png"
+import Img from "../../images/CreditImg.png";
 
 const SectionB = () => {
   return (
@@ -25,38 +25,34 @@ const SectionB = () => {
       <SectionBContainer>
         <SectionBLeft>
           <SectionBHeader>
-            One app. <br />
-            One Lifestyle.
+            The Financial <br />
+            Super-app.
           </SectionBHeader>
-          <SectionBP>
-            {" "}
-            we are africa’s instant messaging, social media, and mobile payment
-            app
-          </SectionBP>
+          <SectionBP>We're taking the pain out of payments, so you can concentrate on the things that matter most to you.</SectionBP>
           <AppFeatures>
             <SingleAppFeature>
               <TickWrap>
                 <Check />
               </TickWrap>
-              <AppFeatureText>Instant Transactions</AppFeatureText>
+              <AppFeatureText>Free Peer 2 Peer Payment</AppFeatureText>
             </SingleAppFeature>
             <SingleAppFeature>
               <TickWrap>
                 <Check />
               </TickWrap>
-              <AppFeatureText>Payments Worldwide</AppFeatureText>
+              <AppFeatureText>In-Chat Payment</AppFeatureText>
             </SingleAppFeature>
             <SingleAppFeature>
               <TickWrap>
                 <Check />
               </TickWrap>
-              <AppFeatureText>Saving Accounts</AppFeatureText>
+              <AppFeatureText>QR Code Payment</AppFeatureText>
             </SingleAppFeature>
             <SingleAppFeature>
               <TickWrap>
                 <Check />
               </TickWrap>
-              <AppFeatureText>100% Mobile Banking</AppFeatureText>
+              <AppFeatureText>Pay User's anonymously</AppFeatureText>
             </SingleAppFeature>
           </AppFeatures>
           <ButtonDiv>
@@ -75,7 +71,7 @@ const SectionB = () => {
           </ButtonDiv>
         </SectionBLeft>
         <SectionBRight>
-            <CreditImage src={Img} alt="SlydoApp" />
+          <CreditImage src={Img} alt="SlydoApp" />
         </SectionBRight>
       </SectionBContainer>
     </SectionDiv>

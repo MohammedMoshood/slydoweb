@@ -49,10 +49,10 @@ const Footer = () => {
                 <MenuLink to="">Product</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Technology</MenuLink>
+                <MenuLink to="">Services</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Crypto</MenuLink>
+                <MenuLink to="">Technology</MenuLink>
               </MenuItem>
             </BlogMenu>
 

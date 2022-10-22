@@ -12,7 +12,10 @@ import {
   TickDiv,
   Tick,
   FeatureText,
-  ButtonDiv , StoreButton , Android , Apple
+  ButtonDiv,
+  StoreButton,
+  Android,
+  Apple,
 } from "../../styles/FrontPage/HeroElements";
 import Img from "../../images/qrcode.png";
 const HeroSection = () => {
@@ -20,22 +23,16 @@ const HeroSection = () => {
     <Hero>
       <HeroContainer>
         <HeroLeft>
-          <HeroH>
-            We are a social technology that <br />
-            helps people connect,
-            <br />
-            and grow businesses.
-          </HeroH>
+          <HeroH>Social Media and eCommerce Meets Mobile Payment.</HeroH>
           <HeroP>
-            Lorem ipsum dolor sit amet, consectetur adipiscing 
-            elit, sed do eiusmod tempor incididunt ut labore.
+          Slydo is a Social Media, E-commerce, and Mobile Payment app that connects people to their friends and the world.
           </HeroP>
           <FeaturesDiv>
             <SingleFeature>
               <TickDiv>
                 <Tick />
               </TickDiv>
-              <FeatureText>NFC Payment</FeatureText>
+              <FeatureText>Photo & Video Sharing</FeatureText>
             </SingleFeature>{" "}
             <SingleFeature>
               <TickDiv>
@@ -53,12 +50,16 @@ const HeroSection = () => {
               <TickDiv>
                 <Tick />
               </TickDiv>
-              <FeatureText>Social Moments</FeatureText>
+              <FeatureText>Mobile Payment</FeatureText>
             </SingleFeature>
           </FeaturesDiv>
           <ButtonDiv>
-            <StoreButton>Play Store <Android/></StoreButton>
-            <StoreButton>App Store <Apple/></StoreButton>
+            <StoreButton>
+              Play Store <Android />
+            </StoreButton>
+            <StoreButton>
+              App Store <Apple />
+            </StoreButton>
           </ButtonDiv>
         </HeroLeft>
         <HeroRight>

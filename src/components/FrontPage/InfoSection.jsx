@@ -10,46 +10,47 @@ import {
   SingleInfo,
   Tick,
   InfoText,
-  TickDiv, Img
+  TickDiv,
+  Img,
 } from "../../styles/FrontPage/InfoElements";
-import PhoneImg from "../../images/MessengerImg.jpg"
+import PhoneImg from "../../images/MessengerImg.jpg";
 const InfoSection = () => {
   return (
     <Info>
       <InfoContainer>
         <InfoLeft>
           <InfoH>
-            Share moments <br />
-            that matter
+            Share your moments <br /> with the world
           </InfoH>
           <InfoP>
-            Send photos and videos on Slydo instantly. You can even 
-            capture the moments that matter to yo the most with a built-in
-            camera
+            Share photos and videos on Slydo with friends and family. Capture the moments that matters most to you and
+            share privately or with everyone.
           </InfoP>
           <InfoDiv>
             <SingleInfo>
               <TickDiv>
                 <Tick></Tick>
               </TickDiv>
-              <InfoText>in-app chat payment</InfoText>
+              <InfoText>Share your special Moments</InfoText>
             </SingleInfo>
             <SingleInfo>
               <TickDiv>
                 <Tick></Tick>
               </TickDiv>
-              <InfoText> media file sharing of photos and videos</InfoText>
+              <InfoText> Connect with your friends and family.
+
+</InfoText>
             </SingleInfo>{" "}
             <SingleInfo>
               <TickDiv>
                 <Tick></Tick>
               </TickDiv>
-              <InfoText> product purchase via chat</InfoText>
+              <InfoText> Get inspired or share your knowledge</InfoText>
             </SingleInfo>
           </InfoDiv>
         </InfoLeft>
         <InfoRight>
-            <Img src={PhoneImg} alt="SlydoApp"></Img>
+          <Img src={PhoneImg} alt="SlydoApp"></Img>
         </InfoRight>
       </InfoContainer>
     </Info>

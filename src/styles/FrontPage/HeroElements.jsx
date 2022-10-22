@@ -44,12 +44,12 @@ export const HeroLeft = styled.div`
   width: 100%;
   height: 500px;
   @media screen and (max-width: 768px) {
-    height: 400px;
+    height: 370px;
   }
 `;
 export const HeroH = styled.h2`
   width: 600px;
-  height: 280px;
+  height: 220px;
   color: #1a191e;
   font-family: "Dm Sans";
   font-style: normal;
@@ -60,7 +60,7 @@ export const HeroH = styled.h2`
     line-height: 130%;
     width: 350px;
     font-size: 30px;
-    height: 180px;
+    height: 150px;
   }
 `;
 export const HeroP = styled.p`
