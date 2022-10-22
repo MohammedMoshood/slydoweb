@@ -14,8 +14,12 @@ import {
   MenuDiv,
   MenuBars,
 } from "../styles/NavbarElements";
+import User from "../layout/header/dropdown/user/User";
 
 const Navbar = () => {
+  const user = localStorage.getItem("accessToken");
+  const slydouser = JSON.parse(user);
+
   return (
     <Nav>
       <NavContainer>
@@ -24,12 +28,12 @@ const Navbar = () => {
         </NavLeft>
         <NavCenter>
           <NavItem>
-            <NavLink to="">Features <Arrow /></NavLink>
+            <NavLink to="">
+              Features <Arrow />
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="">
-              Business 
-            </NavLink>
+            <NavLink to="">Business</NavLink>
           </NavItem>
           <NavItem>
             <NavLink target="_blank" href="https://developer.slydo.co">
@@ -38,7 +42,7 @@ const Navbar = () => {
           </NavItem>
         </NavCenter>
         <NavRight>
-          <Download to={`${process.env.PUBLIC_URL}/auth-login`} >Login</Download>
+          {slydouser ? <User /> : <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>}
           <MenuDiv>
             <MenuBars />
           </MenuDiv>
