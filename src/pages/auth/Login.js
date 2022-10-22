@@ -63,9 +63,9 @@ const Login = () => {
         dispatch({type: LOGIN, payload: response?.data?.user});
         localStorage.setItem("accessToken", JSON.stringify(response?.data));
         window.history.pushState(
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`,
+          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/dashboard"}`,
           "auth-login",
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`
+          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/dashboard"}`
         );
         window.location.reload();
       }
@@ -87,9 +87,9 @@ const Login = () => {
      
       localStorage.setItem("accessToken", JSON.stringify(data));
         window.history.pushState(
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`,
+          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/dashboard"}`,
           "auth-login",
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`
+          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/dashboard"}`
         );
         window.location.reload();
       }else{

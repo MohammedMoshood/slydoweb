@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { Link as LinkRouter } from "react-router-dom";
 import { FaAngleDown, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -149,10 +148,15 @@ export const Download = styled(Link)`
 
   &:hover {
     background: #7185a6;
-  color: #fff;
-    
+    color: #fff;
   }
   @media screen and (max-width: 768px) {
     display: none;
   }
+`;
+
+export const ProfileDiv = styled.div`
+  width: 60px;
+  height: 60px;
+  background: #f8f8f8;
 `;
