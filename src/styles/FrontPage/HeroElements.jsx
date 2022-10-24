@@ -3,19 +3,16 @@ import { FaApple, FaCheck } from "react-icons/fa";
 import { ImAndroid } from "react-icons/im";
 
 export const Hero = styled.div`
- 
   width: 100%;
- 
+
   max-width: 1680px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px 0px;
- 
+
   background: white;
   @media screen and (max-width: 768px) {
-   
-   
   }
 `;
 export const HeroContainer = styled.div`
@@ -23,22 +20,18 @@ export const HeroContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
- 
-  width: 80%;
- 
-  max-width: 1050px;
-  height: 980px;
 
- 
+  width: 80%;
+
+  max-width: 1050px;
 
   @media screen and (max-width: 1050px) {
-    height: 800px;
     margin-top: 20px;
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
     height: auto;
-   
+
     width: 84%;
     align-items: flex-start;
   }
@@ -50,16 +43,12 @@ export const HeroLeft = styled.div`
   align-items: flex-start;
   max-width: 1000px;
   width: 50%;
- 
- 
+
   @media screen and (max-width: 768px) {
-   
     width: 90%;
   }
 `;
 export const HeroH = styled.h2`
- 
- 
   color: #1a191e;
   font-family: "Dm Sans";
   font-style: normal;
@@ -68,23 +57,20 @@ export const HeroH = styled.h2`
   line-height: 110%;
   @media screen and (max-width: 768px) {
     line-height: 130%;
-   
+
     font-size: 41px;
-   
   }
   @media screen and (max-width: 1200px) {
     font-size: 41px;
   }
 `;
 export const HeroP = styled.p`
- 
- 
   font-style: normal;
   font-family: "Inter";
   font-weight: 500;
   font-size: 20px;
   line-height: 170%;
- 
+
   color: #1a191e;
   @media screen and (max-width: 768px) {
     margin-top: 0px;
@@ -102,12 +88,10 @@ export const FeaturesDiv = styled.div`
   flex-direction: row;
   padding: 0px;
   flex-wrap: wrap;
- 
- 
+
   justify-content: space-between;
   @media screen and (max-width: 768px) {
     width: 100%;
-   
   }
 `;
 export const SingleFeature = styled.div`
@@ -162,7 +146,6 @@ export const ButtonDiv = styled.div`
   margin-top: 40px;
   width: 100%;
   max-width: 1000px;
- 
 
   @media screen and (max-width: 768px) {
     margin-top: 20px;
@@ -216,7 +199,6 @@ export const HeroRight = styled.div`
 `;
 
 export const PhoneImg = styled.img`
- 
   width: 80%;
   height: 1100px;
   object-fit: contain;
@@ -225,7 +207,8 @@ export const PhoneImg = styled.img`
     height: 720px;
     width: 100%;
   }
-  @media screen and (max-width: 1000px) {
-   
+  @media screen and (max-width: 1200px) {
+  height: 900px;
+
   }
 `;

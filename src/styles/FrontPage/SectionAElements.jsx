@@ -10,10 +10,13 @@ export const Savings = styled.div`
  
   padding-top: 40px;
   background: white;
+  padding-bottom: 20px;
 
   @media screen and (max-width: 768px) {
     height: auto;
   padding-top: 10px;
+  padding-bottom: 10px;
+
 
   }
 `;
