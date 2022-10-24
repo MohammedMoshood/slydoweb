@@ -4,15 +4,15 @@ import { ImAndroid } from "react-icons/im";
 
 export const Hero = styled.div`
   width: 100%;
-
+  height: max-content;
   max-width: 1680px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px 0px;
-
   background: white;
   @media screen and (max-width: 768px) {
+    height: auto;
   }
 `;
 export const HeroContainer = styled.div`
@@ -20,7 +20,6 @@ export const HeroContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   width: 80%;
 
   max-width: 1050px;
@@ -42,7 +41,7 @@ export const HeroLeft = styled.div`
   flex-direction: column;
   align-items: flex-start;
   max-width: 1050px;
-  width: 60%;
+  width: 50%;
 
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -187,6 +186,7 @@ export const Apple = styled(FaApple)``;
 export const HeroRight = styled.div`
   display: flex;
   justify-content: flex-end;
+  height: auto;
   @media screen and (max-width: 768px) {
     width: 100%;
     place-content: center;
@@ -199,8 +199,8 @@ export const HeroRight = styled.div`
 `;
 
 export const PhoneImg = styled.img`
-  width: 80%;
-  height: 1100px;
+  width: 350px;
+  height: 900px;
   object-fit: contain;
   @media screen and (max-width: 768px) {
     margin-top: 15px;

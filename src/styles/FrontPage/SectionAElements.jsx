@@ -13,7 +13,7 @@ export const Savings = styled.div`
   padding-bottom: 20px;
 
   @media screen and (max-width: 768px) {
-    height: auto;
+  height: auto;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -85,6 +85,7 @@ export const SavingsP = styled.p`
 export const AllDiv = styled.div`
   padding: 20px;
   width: 100%;
+  max-width: 1050px;
   height: 40px;
   display: flex;
   justify-content: flex-end;
@@ -101,7 +102,8 @@ export const AllFeatures = styled.button`
   gap: 8px;
   background: none;
   border: none;
- 
+ padding: 10px;
+ border-radius: 5px;
   height: 30px;
   color: #3f61db;
   font-family: "DM Sans";
