@@ -19,7 +19,7 @@ import {
   TandC,
   PrivacyPolicy,
 } from "../styles/FooterElements";
-import Img from "../images/Slydotext.png";
+import Img from "../images/slydologo.png";
 
 const Footer = () => {
   return (

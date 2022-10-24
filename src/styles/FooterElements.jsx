@@ -8,8 +8,10 @@ export const FooterSection = styled.footer`
   padding: 50px;
   width: 100%;
   max-width: 1680px;
-  height: 350px;
+
   border-top: #e8e8e8 solid 1px;
+  @media screen and(max-width: 768px) {
+  }
 `;
 
 export const FooterContainer = styled.div`
@@ -20,17 +22,17 @@ export const FooterContainer = styled.div`
   width: 100%;
   height: 100%;
   @media screen and (max-width: 768px) {
-  justify-content: flex-start;
+    justify-content: flex-start;
   }
 `;
 export const MenuWrapper = styled.div`
   gap: 170px;
-  height: 85%;
+
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 768px) {
-   flex-direction: column;
-   gap: 60px;
+    flex-direction: column;
+    gap: 60px;
   }
 `;
 
@@ -42,12 +44,11 @@ export const SlydoDiv = styled.div`
   width: 90px;
   height: 50px;
   @media screen and (max-width: 768px) {
-  
   }
 `;
 
 export const SlydoImg = styled.img`
-  height: 25px;
+  height: 50px;
   object-fit: contain;
 `;
 
@@ -56,14 +57,18 @@ export const MenuDiv = styled.div`
   flex-direction: row;
   max-width: 840px;
   width: 100%;
-  height: 100%;
-  /* gap: 40px; */
+  flex-wrap: wrap;
+
+  gap: 40px;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-wrap: nowrap;
+  }
 `;
 export const AboutMenu = styled.div`
   padding: 10px;
   width: 180px;
-  height: 100%;
+
   display: flex;
   list-style: none;
   gap: 25px;
@@ -72,7 +77,7 @@ export const AboutMenu = styled.div`
 export const BlogMenu = styled.div`
   padding: 10px;
   width: 180px;
-  height: 100%;
+
   display: flex;
   list-style: none;
   gap: 25px;
@@ -81,13 +86,13 @@ export const BlogMenu = styled.div`
 export const WebflowMenu = styled.div`
   padding: 10px;
   width: 180px;
-  height: 100%;
+
   display: flex;
   list-style: none;
   gap: 25px;
   flex-direction: column;
   @media screen and (max-width: 768px) {
-   display: none;
+    display: none;
   }
 `;
 export const SocialMenu = styled.ul`
@@ -95,11 +100,11 @@ export const SocialMenu = styled.ul`
   width: 180px;
   list-style: none;
   gap: 25px;
-  height: 100%;
+
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 768px) {
-   display: none;
+    display: none;
   }
 `;
 export const MenuHeader = styled.h5`
@@ -113,7 +118,6 @@ export const MenuHeader = styled.h5`
 `;
 export const MenuItem = styled.li`
   height: 10px;
-  
 `;
 
 export const MenuLink = styled(Link)`
@@ -125,20 +129,22 @@ export const MenuLink = styled(Link)`
   line-height: 160%;
   color: rgba(26, 25, 30, 0.5);
   transition: 0.3s all;
-  &:hover{
-    color:#3F61DB;
+  &:hover {
+    color: #3f61db;
   }
 `;
 
 export const BottomLineDiv = styled.div`
   max-width: 1190px;
   width: 100%;
-  height: 30px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
+  border-top: #e8e8e8 solid 2px;
   @media screen and (max-width: 768px) {
-   display: none;
+    display: none;
   }
 `;
 
@@ -149,13 +155,12 @@ export const SlydoInc = styled.h5`
   font-size: 11px;
   color: rgba(26, 25, 30, 0.5);
   cursor: default;
-`
+`;
 export const TandCDiv = styled.div`
-gap: 24px;
-width: 250px;
-display: flex;
-    
-`
+  gap: 24px;
+  width: 250px;
+  display: flex;
+`;
 export const TandC = styled(Link)`
   text-decoration: none;
   font-family: "Inter";
@@ -165,11 +170,10 @@ export const TandC = styled(Link)`
   line-height: 160%;
   color: rgba(26, 25, 30, 0.5);
   transition: 0.3s all;
-  &:hover{
-    color:#3F61DB;
+  &:hover {
+    color: #3f61db;
   }
-    
-`
+`;
 export const PrivacyPolicy = styled(Link)`
   text-decoration: none;
   font-family: "Inter";
@@ -179,8 +183,7 @@ export const PrivacyPolicy = styled(Link)`
   line-height: 160%;
   color: rgba(26, 25, 30, 0.5);
   transition: 0.3s all;
-  &:hover{
-    color:#3F61DB;
+  &:hover {
+    color: #3f61db;
   }
-    
-`
+`;

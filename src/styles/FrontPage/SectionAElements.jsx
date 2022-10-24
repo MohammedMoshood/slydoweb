@@ -7,11 +7,14 @@ export const Savings = styled.div`
   justify-content: flex-end;
   max-width: 1680px;
   width: 100%;
-  height: 600px;
+ 
+  padding-top: 40px;
   background: white;
 
   @media screen and (max-width: 768px) {
     height: auto;
+  padding-top: 10px;
+
   }
 `;
 
@@ -20,18 +23,20 @@ export const SavingsContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  width: 100%;
+  width: 80%;
   max-width: 1050px;
-  height: 550px;
+ 
   @media screen and (max-width: 768px) {
     height: auto;
+    width:100%;
+   
   }
 `;
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 230px;
-  width: 1050px;
+ 
+ 
   gap: 16px;
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -93,7 +98,7 @@ export const AllFeatures = styled.button`
   gap: 8px;
   background: none;
   border: none;
-  width: 110px;
+ 
   height: 30px;
   color: #3f61db;
   font-family: "DM Sans";
@@ -108,13 +113,15 @@ export const AllFeatures = styled.button`
   }
 `;
 export const CardWrapper = styled.div`
-  height: 260px;
+ 
   width: 100%;
   max-width: 1050px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
-  padding: 20px;
+ 
+  padding-top: 20px;
   gap: 15px;
   @media screen and (max-width: 768px) {
     flex-direction: column;

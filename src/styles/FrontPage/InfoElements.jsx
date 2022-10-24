@@ -5,7 +5,7 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  isolation: isolate;
+ 
   max-width: 1680px;
   width: 100%;
   height: 600px;
@@ -20,9 +20,9 @@ export const Info = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
   max-width: 1050px;
-  height: 500px;
+ 
   overflow: hidden;
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -34,15 +34,16 @@ export const InfoLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 10px;
   max-width: 1000px;
-  width: 100%;
+  width: 90%;
   @media screen and (max-width: 768px) {
     justify-content: center;
+   
   }
 `;
 export const InfoH = styled.h2`
-  width: 600px;
+ 
   color: #1a191e;
   font-family: "Dm Sans";
   font-style: normal;
@@ -51,14 +52,15 @@ export const InfoH = styled.h2`
   line-height: 110%;
   @media screen and (max-width: 768px) {
     line-height: 130%;
-    width: 350px;
-    font-size: 30px;
-    height: 80px;
+   
+    font-size: 41px;
+   
+   
   }
 `;
 export const InfoP = styled.p`
-  width: 530px;
-  height: 108px;
+ 
+ 
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -68,7 +70,7 @@ export const InfoP = styled.p`
   @media screen and (max-width: 768px) {
     width: 100%;
     font-size: 16px;
-    height: 100px;
+   
     word-break: keep-all;
   }
   @media screen and (max-width: 480px) {
@@ -81,11 +83,11 @@ export const InfoDiv = styled.div`
   align-items: flex-start;
   padding: 0px;
   gap: 22px;
-  width: 380px;
-  height: 120px;
+ 
+ 
   @media screen and (max-width: 768px) {
-    width: 400px;
-    height: 130px;
+   
+   
     gap: 15px;
   }
 `;
@@ -121,12 +123,15 @@ export const InfoText = styled.p`
 `;
 
 export const InfoRight = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+ 
+  margin-left: 20px;
   @media screen and (max-width: 768px) {
+  margin-top: 40px;
+
     flex-direction: column;
     justify-content: flex-end;
   }
@@ -139,6 +144,10 @@ export const Img = styled.img`
   height: 500px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  @media screen and (max-width:850px) {
+    height: 480px;
+   
+  }
   @media screen and (max-width: 768px) {
     height: 580px;
   }

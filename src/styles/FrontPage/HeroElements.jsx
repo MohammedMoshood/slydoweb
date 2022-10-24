@@ -3,17 +3,19 @@ import { FaApple, FaCheck } from "react-icons/fa";
 import { ImAndroid } from "react-icons/im";
 
 export const Hero = styled.div`
-  height: 900px;
+ 
   width: 100%;
+ 
   max-width: 1680px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0px;
-  isolation: isolate;
+  padding: 0px 0px;
+ 
   background: white;
   @media screen and (max-width: 768px) {
-    height: 1200px;
+   
+   
   }
 `;
 export const HeroContainer = styled.div`
@@ -21,16 +23,22 @@ export const HeroContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  width: 100%;
+ 
+  width: 80%;
+ 
   max-width: 1050px;
-  height: 917px;
-  top: 100px;
+  height: 980px;
 
+ 
+
+  @media screen and (max-width: 1050px) {
+    height: 800px;
+    margin-top: 20px;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
     height: auto;
-    position: initial;
+   
     width: 84%;
     align-items: flex-start;
   }
@@ -41,15 +49,17 @@ export const HeroLeft = styled.div`
   flex-direction: column;
   align-items: flex-start;
   max-width: 1000px;
-  width: 100%;
-  height: 500px;
+  width: 50%;
+ 
+ 
   @media screen and (max-width: 768px) {
-    height: 370px;
+   
+    width: 90%;
   }
 `;
 export const HeroH = styled.h2`
-  width: 600px;
-  height: 220px;
+ 
+ 
   color: #1a191e;
   font-family: "Dm Sans";
   font-style: normal;
@@ -58,24 +68,27 @@ export const HeroH = styled.h2`
   line-height: 110%;
   @media screen and (max-width: 768px) {
     line-height: 130%;
-    width: 350px;
-    font-size: 30px;
-    height: 150px;
+   
+    font-size: 41px;
+   
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 41px;
   }
 `;
 export const HeroP = styled.p`
-  width: 600px;
-  height: 82px;
+ 
+ 
   font-style: normal;
   font-family: "Inter";
   font-weight: 500;
   font-size: 20px;
   line-height: 170%;
-  margin-top: -35px;
+ 
   color: #1a191e;
   @media screen and (max-width: 768px) {
     margin-top: 0px;
-    width: 100%;
+    width: 110%;
     font-size: 16px;
     word-break: keep-all;
   }
@@ -89,17 +102,17 @@ export const FeaturesDiv = styled.div`
   flex-direction: row;
   padding: 0px;
   flex-wrap: wrap;
-  width: 550px;
-  height: 80px;
+ 
+ 
   justify-content: space-between;
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: auto;
+   
   }
 `;
 export const SingleFeature = styled.div`
   width: 250px;
-  height: 35px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -149,10 +162,11 @@ export const ButtonDiv = styled.div`
   margin-top: 40px;
   width: 100%;
   max-width: 1000px;
-  height: 52px;
+ 
 
   @media screen and (max-width: 768px) {
     margin-top: 20px;
+    width: 110%;
     justify-content: center;
   }
 `;
@@ -196,13 +210,22 @@ export const HeroRight = styled.div`
     display: grid;
     height: 800px;
   }
+  @media screen and (max-width: 480px) {
+    height: 750px;
+  }
 `;
 
 export const PhoneImg = styled.img`
-  height: 1000px;
+ 
+  width: 80%;
+  height: 1100px;
   object-fit: contain;
   @media screen and (max-width: 768px) {
     margin-top: 15px;
     height: 720px;
+    width: 100%;
+  }
+  @media screen and (max-width: 1000px) {
+   
   }
 `;

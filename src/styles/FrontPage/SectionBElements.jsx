@@ -8,10 +8,11 @@ export const SectionDiv = styled.div`
   justify-content: flex-end;
   width: 100%;
   max-width: 1680px;
-  height: 550px;
+
+  padding-top: 60px;
   background: white;
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `;
@@ -19,10 +20,12 @@ export const SectionBContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding: 40px;
+  padding-bottom: 0px;
+  justify-content: center;
   align-items: flex-start;
   isolation: isolate;
-  width: 1010px;
-  height: 460px;
+  width: 80%;
+
   background: #3f61db;
   border-radius: 20px 20px 0px 0px;
 `;
@@ -32,12 +35,14 @@ export const SectionBLeft = styled.div`
   align-items: flex-start;
   padding: 20px;
   gap: 10px;
-  width: 500px;
-  height: 420px;
+  width: 70%;
+  max-width: 1000px;
+
+  @media screen and (max-width: 1200px) {
+    width: 60%;
+  }
 `;
 export const SectionBHeader = styled.h4`
-  width: 600px;
-  height: 130px;
   color: white;
   font-family: "Dm Sans";
   font-style: normal;
@@ -47,7 +52,6 @@ export const SectionBHeader = styled.h4`
   letter-spacing: -0.03em;
 `;
 export const SectionBP = styled.p`
-  width: 450px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -58,10 +62,10 @@ export const SectionBP = styled.p`
 export const AppFeatures = styled.div`
   display: flex;
   flex-direction: row;
-  /* margin-top: 40px; */
   flex-wrap: wrap;
-  width: 400px;
-  height: 80px;
+
+  flex-wrap: wrap;
+
   justify-content: space-between;
 `;
 
@@ -101,7 +105,7 @@ export const AppFeatureText = styled.p`
 
 export const ButtonDiv = styled.div`
   height: 52px;
-  width: 351px;
+
   display: flex;
   flex-direction: row;
   margin-top: 10px;
@@ -129,22 +133,27 @@ export const Button = styled.button`
   transition: all 0.5s;
   text-transform: uppercase;
   &:hover {
-    background: #2ACE79;
+    background: #2ace79;
   }
 `;
 export const StoreLinks = styled.p`
-text-transform: none;
+  text-transform: none;
   font-family: "Inter";
   font-size: 15px;
-`
+`;
 
 export const SectionBRight = styled.div`
   display: flex;
+  flex-direction: column;
+  align-self: flex-end;
   justify-content: flex-end;
+
+  width: 90%;
 `;
 
 export const CreditImage = styled.img`
   height: 420px;
+  width: 100%;
   object-fit: contain;
-  border-radius: 45px 45px 0px 0px ;
+  border-radius: 45px 45px 0px 0px;
 `;
