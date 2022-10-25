@@ -17,7 +17,7 @@ import {
   Android,
   Apple,
 } from "../../styles/FrontPage/HeroElements";
-import Img from "../../images/qrcode.png";
+import Img from "../../images/qrcode.gif";
 const HeroSection = () => {
   return (
     <Hero>
@@ -25,7 +25,7 @@ const HeroSection = () => {
         <HeroLeft>
           <HeroH>Social media and <br/>e-commerce meets mobile payment.</HeroH>
           <HeroP>
-          Slydo is a Social Media, E-commerce, and Mobile Payment app that connects people to their friends and the world.
+          Slydo is a social media, e-commerce, and mobile payment app that connects people to their friends and the world.
           </HeroP>
           <FeaturesDiv>
             <SingleFeature>

@@ -29,7 +29,6 @@ export const HeroContainer = styled.div`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    height: auto;
 
     width: 84%;
     align-items: flex-start;
@@ -191,7 +190,7 @@ export const HeroRight = styled.div`
     width: 100%;
     place-content: center;
     display: grid;
-    height: 800px;
+    height: 950px;
   }
   @media screen and (max-width: 480px) {
     height: 750px;
@@ -204,7 +203,7 @@ export const PhoneImg = styled.img`
   object-fit: contain;
   @media screen and (max-width: 768px) {
     margin-top: 15px;
-    height: 720px;
+    height: 700px;
     width: 100%;
   }
   @media screen and (max-width: 1200px) {

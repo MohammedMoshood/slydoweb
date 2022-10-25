@@ -5,11 +5,10 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  justify-content: center;
   max-width: 1680px;
   width: 100%;
   height: 600px;
-  justify-content: flex-end;
   background: #e5eafe;
   @media screen and (max-width: 768px) {
     height: auto;
@@ -130,7 +129,7 @@ export const InfoRight = styled.div`
  
   margin-left: 20px;
   @media screen and (max-width: 768px) {
-  margin-top: 40px;
+  padding: 40px 0;
 
     flex-direction: column;
     justify-content: flex-end;
@@ -142,8 +141,6 @@ export const InfoRight = styled.div`
 `;
 export const Img = styled.img`
   height: 500px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
   @media screen and (max-width:850px) {
     height: 480px;
    
@@ -152,6 +149,6 @@ export const Img = styled.img`
     height: 580px;
   }
   @media screen and (max-width: 480px) {
-    height: 500px;
+    height: 600px;
   }
 `;

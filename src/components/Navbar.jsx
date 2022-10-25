@@ -42,7 +42,7 @@ const Navbar = () => {
           </NavItem>
         </NavCenter>
         <NavRight>
-          {slydouser ? <User /> : <Download target="_blank" to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>}
+          {slydouser ? <User /> : <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>}
           <MenuDiv>
             <MenuBars />
           </MenuDiv>
