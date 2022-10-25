@@ -5,13 +5,13 @@ export const SectionDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
   max-width: 1680px;
   padding-top: 60px;
   background: white;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1050px) {
     display: none;
   }
 `;
@@ -19,6 +19,7 @@ export const SectionBContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding: 40px;
+  padding-bottom:0px ;
   justify-content: center;
   align-items: flex-start;
   isolation: isolate;
@@ -62,9 +63,6 @@ export const AppFeatures = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-  flex-wrap: wrap;
-
   justify-content: space-between;
 `;
 
@@ -144,14 +142,11 @@ export const StoreLinks = styled.p`
 export const SectionBRight = styled.div`
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
   width: 90%;
 `;
 
 export const CreditImage = styled.img`
   height: 500px;
-  width: 100%;
   object-fit: contain;
-  border-radius: 45px 45px 0px 0px;
 `;
