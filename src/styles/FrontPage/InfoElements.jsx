@@ -21,9 +21,10 @@ export const InfoContainer = styled.div`
   flex-direction: row;
   width: 80%;
   max-width: 1050px;
- 
+ align-items: center;
   overflow: hidden;
   @media screen and (max-width: 768px) {
+    align-items: baseline;
     flex-direction: column;
     height: 100%;
     width: 84%;
@@ -33,6 +34,7 @@ export const InfoLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   gap: 10px;
   max-width: 1000px;
   width: 90%;
@@ -124,10 +126,10 @@ export const InfoText = styled.p`
 export const InfoRight = styled.div`
   width: 90%;
   display: flex;
+  justify-self: center;
+  align-self: center;
   justify-content: center;
-  align-items: center;
- 
-  margin-left: 20px;
+
   @media screen and (max-width: 768px) {
   padding: 40px 0;
 
@@ -140,13 +142,14 @@ export const InfoRight = styled.div`
   }
 `;
 export const Img = styled.img`
-  height: 500px;
+  height: 500px; 
+  object-fit: contain;
   @media screen and (max-width:850px) {
     height: 480px;
    
   }
   @media screen and (max-width: 768px) {
-    height: 580px;
+    height: 700px;
   }
   @media screen and (max-width: 480px) {
     height: 600px;

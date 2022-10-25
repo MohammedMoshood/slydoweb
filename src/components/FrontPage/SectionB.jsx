@@ -26,7 +26,7 @@ const SectionB = () => {
         <SectionBLeft>
           <SectionBHeader>
             The Financial <br />
-            Super-app.
+            Super App.
           </SectionBHeader>
           <SectionBP>We're taking the pain out of payments, so you can concentrate on the things that matter most to you.</SectionBP>
           <AppFeatures>

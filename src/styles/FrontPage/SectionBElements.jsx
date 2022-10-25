@@ -5,14 +5,13 @@ export const SectionDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
   max-width: 1680px;
-
   padding-top: 60px;
   background: white;
 
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
@@ -20,7 +19,6 @@ export const SectionBContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding: 40px;
-  padding-bottom: 0px;
   justify-content: center;
   align-items: flex-start;
   isolation: isolate;
@@ -34,6 +32,7 @@ export const SectionBLeft = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 20px;
+  align-self: center;
   gap: 10px;
   width: 70%;
   max-width: 1000px;
@@ -146,13 +145,12 @@ export const SectionBRight = styled.div`
   display: flex;
   flex-direction: column;
   align-self: flex-end;
-  justify-content: flex-end;
-
+  justify-content: center;
   width: 90%;
 `;
 
 export const CreditImage = styled.img`
-  height: 420px;
+  height: 500px;
   width: 100%;
   object-fit: contain;
   border-radius: 45px 45px 0px 0px;
