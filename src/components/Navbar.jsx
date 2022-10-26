@@ -16,7 +16,7 @@ import {
 } from "../styles/NavbarElements";
 import User from "../layout/header/dropdown/user/User";
 
-const Navbar = () => {
+const Navbar = ({sidebarOpen}) => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
 
@@ -44,7 +44,7 @@ const Navbar = () => {
         <NavRight>
           {slydouser ? <User /> : <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>}
           <MenuDiv>
-            <MenuBars />
+            <MenuBars onClick={sidebarOpen} ></MenuBars>
           </MenuDiv>
         </NavRight>
       </NavContainer>

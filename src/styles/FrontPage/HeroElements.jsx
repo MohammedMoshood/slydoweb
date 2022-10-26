@@ -143,6 +143,7 @@ export const ButtonDiv = styled.div`
   gap: 35px;
   margin-top: 40px;
   width: 100%;
+  color: white;
   max-width: 1000px;
 
   @media screen and (max-width: 768px) {
@@ -151,10 +152,11 @@ export const ButtonDiv = styled.div`
     justify-content: center;
   }
 `;
-export const StoreButton = styled.button`
+export const StoreButton = styled.a`
   display: flex;
   flex-direction: row;
   color: white;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
   padding: 16px 24px;
@@ -170,6 +172,7 @@ export const StoreButton = styled.button`
   transition: all 0.5s;
   &:hover {
     background: #3f61db;
+     color:white;
   }
   @media screen and (max-width: 768px) {
     font-size: 11px;

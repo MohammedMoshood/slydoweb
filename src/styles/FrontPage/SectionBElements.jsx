@@ -102,18 +102,22 @@ export const AppFeatureText = styled.p`
 
 export const ButtonDiv = styled.div`
   height: 52px;
-
+  color:white;
   display: flex;
   flex-direction: row;
   margin-top: 10px;
   align-items: center;
   padding: 0px;
   gap: 35px;
+  &:hover{
+    color:white;
+  }
 `;
-export const Button = styled.button`
+export const Button = styled.a`
   display: flex;
   flex-direction: row;
   color: white;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -131,6 +135,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   &:hover {
     background: #2ace79;
+    color: #fff;
   }
 `;
 export const StoreLinks = styled.p`

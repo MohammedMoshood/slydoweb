@@ -118,20 +118,22 @@ export const MenuHeader = styled.h5`
 `;
 export const MenuItem = styled.li`
   height: 10px;
+  color: rgba(59, 58, 59, 0.5);
+  &:hover {
+    color: #3f61db;
+  }
 `;
 
-export const MenuLink = styled(Link)`
+export const MenuLink = styled.a`
   text-decoration: none;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
+  color: rgba(59, 58, 59, 0.5);
   font-size: 13px;
   line-height: 160%;
-  color: rgba(26, 25, 30, 0.5);
+  cursor: pointer;
   transition: 0.3s all;
-  &:hover {
-    color: #3f61db;
-  }
 `;
 
 export const BottomLineDiv = styled.div`

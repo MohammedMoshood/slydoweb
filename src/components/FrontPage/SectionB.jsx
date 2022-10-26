@@ -56,13 +56,13 @@ const SectionB = () => {
             </SingleAppFeature>
           </AppFeatures>
           <ButtonDiv>
-            <Button>
+            <Button >
               <FaApple size={24} />
               <div>
                 Download on the <br /> <StoreLinks>App Store</StoreLinks>
               </div>
             </Button>
-            <Button>
+            <Button target="_blank" href="https://play.google.com/store/apps/details?id=com.slydo.slydo">
               <FaGooglePlay size={24} />
               <div>
                 GET IT ON <br /> <StoreLinks>Google Play</StoreLinks>

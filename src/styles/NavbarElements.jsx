@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   height: 103px;
   background: white;
   @media screen and (max-width: 768px) {
-    height: 50px;
+    height: 70px;
     padding: 10px 0;
     position: sticky;
     justify-content: center;

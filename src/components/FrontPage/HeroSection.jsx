@@ -54,7 +54,7 @@ const HeroSection = () => {
             </SingleFeature>
           </FeaturesDiv>
           <ButtonDiv>
-            <StoreButton>
+            <StoreButton target="_blank" href="https://play.google.com/store/apps/details?id=com.slydo.slydo" >
               Play Store <Android />
             </StoreButton>
             <StoreButton>

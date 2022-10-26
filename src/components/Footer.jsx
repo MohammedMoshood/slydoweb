@@ -33,52 +33,52 @@ const Footer = () => {
             <AboutMenu>
               <MenuHeader> About</MenuHeader>
               <MenuItem>
-                <MenuLink to="">Features</MenuLink>
+                <MenuLink target="_blank" href="">Features</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Pricing</MenuLink>
+                <MenuLink target="_blank" href="">Pricing</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Support</MenuLink>
+                <MenuLink target="_blank" href="">Support</MenuLink>
               </MenuItem>
             </AboutMenu>
 
             <BlogMenu>
               <MenuHeader>Blog</MenuHeader>
               <MenuItem>
-                <MenuLink to="">Product</MenuLink>
+                <MenuLink target="_blank" href="">Product</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Services</MenuLink>
+                <MenuLink target="_blank" href="">Services</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Technology</MenuLink>
+                <MenuLink target="_blank" href="">Technology</MenuLink>
               </MenuItem>
             </BlogMenu>
 
             <WebflowMenu>
               <MenuHeader>Webflow</MenuHeader>
               <MenuItem>
-                <MenuLink to="">Styleguide</MenuLink>
+                <MenuLink target="_blank" href="">Styleguide</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Licensing</MenuLink>
+                <MenuLink target="_blank" href="">Licensing</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Changelog</MenuLink>
+                <MenuLink target="_blank" href="">Changelog</MenuLink>
               </MenuItem>
             </WebflowMenu>
 
             <SocialMenu>
               <MenuHeader>Social Media</MenuHeader>
               <MenuItem>
-                <MenuLink to="">Twitter</MenuLink>
+                <MenuLink target="_blank" href="https://twitter.com/Slydoapp">Twitter</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Facebook</MenuLink>
+                <MenuLink target="_blank" href="">Facebook</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink to="">Instagram</MenuLink>
+                <MenuLink target="_blank" href="">Instagram</MenuLink>
               </MenuItem>
             </SocialMenu>
           </MenuDiv>
