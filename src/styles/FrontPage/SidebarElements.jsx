@@ -54,7 +54,8 @@ export const CloseDiv = styled.div`
   font-size: 15px;
   height: 25px;
   border-radius: 5px;
-  border: 1px solid black;
+  color:#4E5A77;
+  border: 2px solid #4E5A77;
   cursor: pointer;
   &:hover {
     background: #3f61db;

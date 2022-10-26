@@ -16,6 +16,8 @@ import {
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { submenuData } from "./SidebarData";
 import Logo from "../../images/slydologo.png";
+import {HiX} from "react-icons/hi"
+
 import User from "../../layout/header/dropdown/user/User";
 
 const Submenu = ({ sidebarClose, showsubmenu, closeSubmenu }) => {
@@ -27,7 +29,7 @@ const Submenu = ({ sidebarClose, showsubmenu, closeSubmenu }) => {
         <SidebarLogo src={Logo} alt="slydo"></SidebarLogo>
         <HeadRight>
           {slydouser && <User />}
-          <CloseDiv onClick={sidebarClose}>x</CloseDiv>
+          <CloseDiv onClick={sidebarClose}><HiX/></CloseDiv>
         </HeadRight>
       </SidebarHead>
       <Fade>
