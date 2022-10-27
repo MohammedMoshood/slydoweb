@@ -38,7 +38,7 @@ const Sidebar = ({ isOpen, sidebarClose, showsubmenu, openSubmenu, closeSubmenu 
             {SideData.map((item, index) => {
               const submenu = item.submenu;
               return (
-                <MenuItem onClick={submenu && openSubmenu} key={index}>
+                <MenuItem onClick={submenu && openSubmenu} style={item.style} key={index}>
                   {item.title} {submenu && <MdKeyboardArrowRight />}{" "}
                 </MenuItem>
               );

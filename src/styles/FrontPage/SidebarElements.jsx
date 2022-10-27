@@ -25,11 +25,11 @@ export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: ${({ showsubmenu }) => (showsubmenu ? "500px" : "400px")};
+  height: ${({ showsubmenu }) => (showsubmenu ? "515px" : "395px")};
   transition: 0.3s all ease-in-out;
   border-radius: 10px;
   background-color: white;
-  padding: 20px;
+  padding: 20px 10px;
 `;
 
 export const SidebarHead = styled.div`
@@ -37,7 +37,8 @@ export const SidebarHead = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
+  padding: 0 14px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(217, 217, 217, 0.3);
 `;
 
@@ -53,6 +54,7 @@ export const CloseDiv = styled.div`
   transition: 0.3s ease-in-out all;
   font-size: 15px;
   height: 25px;
+  outline:none;
   border-radius: 5px;
   color:#4E5A77;
   border: 2px solid #4E5A77;
@@ -86,7 +88,7 @@ export const MenuItem = styled.div`
   width: 100%;
   font-size: 16px;
   border-bottom: 1px solid rgba(217, 217, 217, 0.3);
-  padding: 20px 0;
+  padding: 20px 20px;
   justify-content: space-between;
   cursor: pointer;
   display: flex;
@@ -102,8 +104,9 @@ export const BottomDiv = styled.div`
   justify-content: center;
   width: 100%;
   background: #f7f8fa;
-  height: 100px;
-  margin-top: 20px;
+  /* height: 60%; */
+  padding: 30px 0;
+  margin-top: 10px;
   border-radius: 10px; ;
 `;
 
@@ -124,7 +127,7 @@ export const LoginButton = styled(Link)`
   transition: all 0.3s;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 100%;
 

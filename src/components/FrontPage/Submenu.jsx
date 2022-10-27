@@ -25,7 +25,7 @@ const Submenu = ({ sidebarClose, showsubmenu, closeSubmenu }) => {
   const slydouser = JSON.parse(user);
   return (
     <SidebarContainer showsubmenu={showsubmenu}>
-      <SidebarHead style={{ border: "none" }}>
+      <SidebarHead style={{ border: "none" , paddingBottom:"10px"}}>
         <SidebarLogo src={Logo} alt="slydo"></SidebarLogo>
         <HeadRight>
           {slydouser && <User />}
@@ -33,7 +33,7 @@ const Submenu = ({ sidebarClose, showsubmenu, closeSubmenu }) => {
         </HeadRight>
       </SidebarHead>
       <Fade>
-        <SidebarHead style={{ paddingLeft: "20px" }}>
+        <SidebarHead style={{paddingBottom:"10px" , paddingLeft:"14px" ,fontWeight:500 }}>
           <BackButton onClick={closeSubmenu}>
             <MdKeyboardArrowLeft />
             Back

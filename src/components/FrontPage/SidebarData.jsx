@@ -41,7 +41,8 @@ export const SideData = [
 
     },
     {
-        title : "Developers"
+        title : "Developers",
+        style:{border:"none"} 
 
     }
 ] ;
@@ -68,7 +69,7 @@ export const submenuData = [
     {
       title: "Developers",
       path: "",
-      icon:<img style={{height:"20px"}} src={icon4}></img>
-
+      icon:<img style={{height:"20px"}} src={icon4}></img>,
+      
     },
   ]
