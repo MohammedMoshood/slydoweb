@@ -129,10 +129,15 @@ export const CardWrapper = styled.div`
   padding-top: 20px;
   gap: 15px;
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    /* flex-direction: column; */
     height: auto;
+    /* background: red; */
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    /* padding-left: 25px; */
+    /* padding-top: -10px; */
+    /* padding-right: 25px; */
+    gap: 45px;
   }
 `;
 
@@ -143,6 +148,10 @@ export const CardContainer = styled.div`
   justify-content: space-between;
   width: 190px;
   height: 220px;
+  @media screen and (max-width: 768px) {
+   width: 140px;
+   height:190px;
+  }
 `;
 export const Card = styled.div`
   display: flex;
@@ -159,6 +168,10 @@ export const Card = styled.div`
   &:hover {
     width: 160px;
     height: 160px;
+  }
+  @media screen and (max-width: 768px) {
+   width: 160px;
+   height:160px;
   }
 `;
 export const CardText = styled.p`

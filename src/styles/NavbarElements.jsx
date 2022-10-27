@@ -18,8 +18,8 @@ export const Nav = styled.nav`
     justify-content: center;
     top: 0;
     z-index: 10;
-
-    border-bottom: 1px dashed #3f61db;
+   
+    border-bottom: 0.1px solid #e2e2e2;
   }
 `;
 
@@ -97,7 +97,7 @@ export const NavRight = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   padding: 0px;
   width: 400px;
@@ -110,13 +110,14 @@ export const MenuDiv = styled.button`
     border: none;
     cursor: pointer;
     width: 40px;
-    height: 25px;
+    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     background: #3f61db;
     border-radius: 15px;
+
     &:hover {
       background: #94b0dc;
     }

@@ -89,7 +89,7 @@ export const FeaturesDiv = styled.div`
 
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 120%;
   }
 `;
 export const SingleFeature = styled.div`
@@ -103,6 +103,7 @@ export const SingleFeature = styled.div`
     width: 180px;
   }
   @media screen and (max-width: 480px) {
+    width: 170px;
     height: 30px;
   }
 `;
@@ -150,6 +151,7 @@ export const ButtonDiv = styled.div`
     margin-top: 20px;
     width: 110%;
     justify-content: center;
+    gap:25px;
   }
 `;
 export const StoreButton = styled.a`
@@ -176,7 +178,7 @@ export const StoreButton = styled.a`
   }
   @media screen and (max-width: 768px) {
     font-size: 11px;
-    width: 100px;
+    width: 120px;
     height: 35px;
     padding: 8px 4px;
   }
@@ -196,7 +198,12 @@ export const HeroRight = styled.div`
     height: 950px;
   }
   @media screen and (max-width: 480px) {
-    height: 750px;
+    height: 795px;
+    padding-bottom: 15px;
+  }
+  @media screen and (max-width: 400px) {
+    height: 752px;
+    padding-bottom: 15px;
   }
 `;
 
