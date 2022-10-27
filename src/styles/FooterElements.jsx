@@ -145,9 +145,7 @@ export const BottomLineDiv = styled.div`
   align-items: center;
   margin-top: 50px;
   border-top: #e8e8e8 solid 2px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+
 `;
 
 export const SlydoInc = styled.h5`
