@@ -145,7 +145,6 @@ export const BottomLineDiv = styled.div`
   align-items: center;
   margin-top: 50px;
   border-top: #e8e8e8 solid 2px;
-
 `;
 
 export const SlydoInc = styled.h5`
@@ -155,11 +154,16 @@ export const SlydoInc = styled.h5`
   font-size: 11px;
   color: rgba(26, 25, 30, 0.5);
   cursor: default;
+  @media screen and (max-width: 480px) {
+    font-size:8px;
+  }
 `;
 export const TandCDiv = styled.div`
   gap: 24px;
-  width: 250px;
   display: flex;
+  @media screen and (max-width: 480px) {
+    gap:12px;
+  }
 `;
 export const TandC = styled(Link)`
   text-decoration: none;
@@ -173,6 +177,9 @@ export const TandC = styled(Link)`
   &:hover {
     color: #3f61db;
   }
+  @media screen and (max-width: 480px) {
+    font-size:8px;
+  }
 `;
 export const PrivacyPolicy = styled(Link)`
   text-decoration: none;
@@ -185,5 +192,8 @@ export const PrivacyPolicy = styled(Link)`
   transition: 0.3s all;
   &:hover {
     color: #3f61db;
+  }
+  @media screen and (max-width: 480px) {
+    font-size:8px;
   }
 `;
