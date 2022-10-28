@@ -161,3 +161,34 @@ export const ProfileDiv = styled.div`
   height: 60px;
   background: #f8f8f8;
 `;
+
+export const Goto = styled(Link)`
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  cursor: pointer;
+  outline: 0;
+  width: 160px;
+  height: 40px;
+  background: #3f61db;
+  border-radius: 50px;
+  transition: all 0.3s;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+
+  &:hover {
+    background: #7185a6;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;

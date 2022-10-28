@@ -13,10 +13,12 @@ import {
   Arrow,
   MenuDiv,
   MenuBars,
+  Goto,
 } from "../styles/NavbarElements";
 import User from "../layout/header/dropdown/user/User";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
-const Navbar = ({sidebarOpen}) => {
+const Navbar = ({ sidebarOpen }) => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
 
@@ -42,9 +44,18 @@ const Navbar = ({sidebarOpen}) => {
           </NavItem>
         </NavCenter>
         <NavRight>
-          {slydouser ? <User /> : <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>}
+          {slydouser ? (
+            <>
+              <User />{" "}
+              <Goto style={{ fontSize: "12px" }} to={`${process.env.PUBLIC_URL}/dashboard`}>
+                Go to Dashboard <MdKeyboardArrowRight />{" "}
+              </Goto>
+            </>
+          ) : (
+            <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>
+          )}
           <MenuDiv>
-            <MenuBars onClick={sidebarOpen} ></MenuBars>
+            <MenuBars onClick={sidebarOpen}></MenuBars>
           </MenuDiv>
         </NavRight>
       </NavContainer>

@@ -23,7 +23,7 @@ const HeroSection = () => {
     <Hero>
       <HeroContainer>
         <HeroLeft>
-          <HeroH>Social media and <br/>e-commerce meets mobile payment.</HeroH>
+          <HeroH>Social Media and <br/>E-Commerce meets Mobile Payment.</HeroH>
           <HeroP>
           Slydo is a social media, e-commerce, and mobile payment app that connects people to their friends and the world.
           </HeroP>
