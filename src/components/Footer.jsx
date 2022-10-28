@@ -84,7 +84,7 @@ const Footer = () => {
           </MenuDiv>
         </MenuWrapper>
         <BottomLineDiv>
-          <SlydoInc>@ 2022 slydo inc.</SlydoInc>
+          <SlydoInc>@ 2022 Slydo inc.</SlydoInc>
           <TandCDiv>
             <TandC to="">Terms and Conditions</TandC>
             <PrivacyPolicy to="">Privacy Policy</PrivacyPolicy>
