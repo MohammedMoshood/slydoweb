@@ -15,7 +15,7 @@ import {
   MenuBars,
   Goto,
 } from "../styles/NavbarElements";
-import User from "../layout/header/dropdown/user/User";
+import FrontPageUser from "../layout/header/dropdown/user/FrontPageUser";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Navbar = ({ sidebarOpen }) => {
@@ -44,16 +44,7 @@ const Navbar = ({ sidebarOpen }) => {
           </NavItem>
         </NavCenter>
         <NavRight>
-          {slydouser ? (
-            <>
-              <User />{" "}
-              <Goto style={{ fontSize: "12px" }} to={`${process.env.PUBLIC_URL}/dashboard`}>
-                Go to Dashboard <MdKeyboardArrowRight />{" "}
-              </Goto>
-            </>
-          ) : (
-            <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>
-          )}
+          {slydouser ? <FrontPageUser /> : <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>}
           <MenuDiv>
             <MenuBars onClick={sidebarOpen}></MenuBars>
           </MenuDiv>

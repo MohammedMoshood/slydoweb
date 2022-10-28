@@ -49,10 +49,10 @@ const Footer = () => {
                 <MenuLink target="_blank" href="">Product</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Services</MenuLink>
+                <MenuLink target="_blank" href="">Technology</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Technology</MenuLink>
+                <MenuLink target="_blank" href="">Crypto</MenuLink>
               </MenuItem>
             </BlogMenu>
 
@@ -75,10 +75,10 @@ const Footer = () => {
                 <MenuLink target="_blank" href="https://twitter.com/Slydoapp">Twitter</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Facebook</MenuLink>
+                <MenuLink target="_blank" href="https://www.facebook.com/slydoapp">Facebook</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Instagram</MenuLink>
+                <MenuLink target="_blank" href="https://www.instagram.com/slydoapp">Instagram</MenuLink>
               </MenuItem>
             </SocialMenu>
           </MenuDiv>
