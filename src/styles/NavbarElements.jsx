@@ -216,9 +216,12 @@ justify-content: center;
   
 `
 export const LabelTitle = styled.h6`
+font-family: "Inter";
   font-size: 14px;
 `
 export const LabelP = styled.p`
+font-family: "Inter";
+
   font-size: 10px;
   
 `
