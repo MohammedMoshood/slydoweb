@@ -168,7 +168,7 @@ export const NavmenuContainer = styled.aside`
   position: absolute;
   top: 90px;
   left:50%;
-  transform: translateX(-58%);
+  transform: translateX(-50%);
   z-index: 5;
   width: 550px;
   height: 250px;
