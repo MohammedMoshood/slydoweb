@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../images/slydologo.png";
 import {
   Nav,
@@ -13,24 +13,24 @@ import {
   Arrow,
   MenuDiv,
   MenuBars,
-  Goto,
 } from "../styles/NavbarElements";
 import FrontPageUser from "../layout/header/dropdown/user/FrontPageUser";
-import { MdKeyboardArrowRight } from "react-icons/md";
 
-const Navbar = ({ sidebarOpen }) => {
+const Navbar = ({ sidebarOpen , openSubnav }) => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
 
+
   return (
-    <Nav>
+    <Nav  >
       <NavContainer>
         <NavLeft>
           <SLydoLogo src={Logo} alt="Slydo" />
         </NavLeft>
         <NavCenter>
-          <NavItem>
-            <NavLink to="">
+          <NavItem onMouseEnter={openSubnav} onMouseLeave=
+          {openSubnav} >
+            <NavLink  className="link-btn" to="">
               Features <Arrow />
             </NavLink>
           </NavItem>

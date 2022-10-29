@@ -33,39 +33,39 @@ const Footer = () => {
             <AboutMenu>
               <MenuHeader> About</MenuHeader>
               <MenuItem>
-                <MenuLink target="_blank" href="">Features</MenuLink>
+                <MenuLink  href="#">Features</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Pricing</MenuLink>
+                <MenuLink  href="#">Pricing</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Support</MenuLink>
+                <MenuLink  href="#">Support</MenuLink>
               </MenuItem>
             </AboutMenu>
 
             <BlogMenu>
               <MenuHeader>Blog</MenuHeader>
               <MenuItem>
-                <MenuLink target="_blank" href="">Product</MenuLink>
+                <MenuLink  href="#">Product</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Technology</MenuLink>
+                <MenuLink  href="#">Services</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Crypto</MenuLink>
+                <MenuLink  href="#">Technology</MenuLink>
               </MenuItem>
             </BlogMenu>
 
             <WebflowMenu>
-              <MenuHeader>Webflow</MenuHeader>
+              <MenuHeader>Business</MenuHeader>
               <MenuItem>
-                <MenuLink target="_blank" href="">Styleguide</MenuLink>
+                <MenuLink  href="#">Contract</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Licensing</MenuLink>
+                <MenuLink  href="#">Invoice</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink target="_blank" href="">Changelog</MenuLink>
+                <MenuLink  href="#">Payment</MenuLink>
               </MenuItem>
             </WebflowMenu>
 

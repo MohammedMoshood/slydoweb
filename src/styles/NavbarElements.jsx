@@ -9,7 +9,7 @@ export const Nav = styled.nav`
   padding: 24px 0px;
   width: 100%;
   max-width: 1680px;
-  height: 103px;
+  height: 90px;
   background: white;
   @media screen and (max-width: 768px) {
     height: 70px;
@@ -18,7 +18,7 @@ export const Nav = styled.nav`
     justify-content: center;
     top: 0;
     z-index: 10;
-   
+
     border-bottom: 0.1px solid #e2e2e2;
   }
 `;
@@ -31,7 +31,7 @@ export const NavContainer = styled.div`
   padding: 0px;
   max-width: 1400px;
   width: 84%;
-  height: 55px;
+
   @media screen and (max-width: 768px) {
     height: 40px;
   }
@@ -43,12 +43,12 @@ export const NavLeft = styled.div`
   align-items: center;
   padding: 0px;
   gap: 10px;
-  width: 400px;
-  height: 55px;
+  /* width: 400px; */
 `;
 
 export const SLydoLogo = styled.img`
   height: 43px;
+
   @media screen and (max-width: 768px) {
     height: 30px;
   }
@@ -62,7 +62,7 @@ export const NavCenter = styled.div`
   justify-content: center;
   gap: 16px;
   width: 438px;
-  height: 43px;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -100,8 +100,7 @@ export const NavRight = styled.div`
   gap: 10px;
   align-items: center;
   padding: 0px;
-  width: 400px;
-  height: 54.99px;
+  /* width: 400px; */
 `;
 
 export const MenuDiv = styled.button`
@@ -135,20 +134,20 @@ export const Download = styled(Link)`
   gap: 10px;
   cursor: pointer;
   outline: 0;
-  width: 110px;
+  width: 80px;
   height: 32px;
   border: none;
   background: #3f61db;
-  border-radius: 6px;
+  border-radius: 20px;
   transition: all 0.3s;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 100%;
 
   &:hover {
-    background: #7185a6;
+    background:  rgba(0, 77, 200, 0.423);
     color: #fff;
   }
   @media screen and (max-width: 768px) {
@@ -162,33 +161,64 @@ export const ProfileDiv = styled.div`
   background: #f8f8f8;
 `;
 
-export const Goto = styled(Link)`
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 16px;
-  gap: 10px;
-  cursor: pointer;
-  outline: 0;
-  width: 160px;
-  height: 40px;
-  background: #3f61db;
-  border-radius: 50px;
-  transition: all 0.3s;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 100%;
+//Navmenu
 
-  &:hover {
-    background: #7185a6;
-    color: #fff;
-  }
-
+export const NavmenuContainer = styled.aside`
+  background: #f1f3f6;
+  position: absolute;
+  top: 90px;
+  left:50%;
+  transform: translateX(-58%);
+  z-index: 5;
+  width: 550px;
+  height: 250px;
+  transition: 1s ease-in-out all;
+  opacity: ${({ subnav }) => (subnav ? "1" : "0")};
+  display: ${({ subnav }) => (subnav ? "grid" : "none")};
+  padding: 20px;
+  border-radius: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
+export const NavmenuLink = styled.a`
+  background: white;
+  width: 100%;
+  border-radius: 10px;
+  height: 95px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+  gap:5px;
+  justify-content: center;
+  &:hover{
+    background-color: rgba(59, 61, 190, 0.1 );
+  }
+`;
+
+export const IconDiv = styled.div`
+  display: flex;
+  width: 40px;
+  justify-content: center;
+  align-items: flex-start;
+`
+export const Icon = styled.img`
+
+  margin-top: 7px;
+  justify-self: flex-start;
+`
+export const LabelDiv = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+  
+`
+export const LabelTitle = styled.h6`
+  font-size: 14px;
+`
+export const LabelP = styled.p`
+  font-size: 10px;
+  
+`
