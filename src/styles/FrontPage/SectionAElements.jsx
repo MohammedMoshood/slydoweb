@@ -172,6 +172,10 @@ export const Card = styled.div`
   @media screen and (max-width: 768px) {
    width: 160px;
    height:160px;
+   &:hover {
+    width: 140px;
+    height: 140px;
+  }
   }
 `;
 export const CardText = styled.p`

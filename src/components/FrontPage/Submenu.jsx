@@ -16,24 +16,38 @@ import {
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { submenuData } from "./SidebarData";
 import Logo from "../../images/slydologo.png";
-import {HiX} from "react-icons/hi"
+import { HiX } from "react-icons/hi";
+import { SubmenuDropdown } from "./UserDropdown";
 
-import User from "../../layout/header/dropdown/user/User";
-
-const Submenu = ({ sidebarClose, showsubmenu, closeSubmenu }) => {
+const Submenu = ({ toggleMenuDropdown , isDropdown, sidebarClose, showsubmenu, closeSubmenu }) => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
   return (
     <SidebarContainer showsubmenu={showsubmenu}>
-      <SidebarHead style={{ border: "none" , paddingBottom:"10px"}}>
+      <SidebarHead style={{ border: "none", paddingBottom: "10px" }}>
         <SidebarLogo src={Logo} alt="slydo"></SidebarLogo>
         <HeadRight>
-          {slydouser && <User />}
-          <CloseDiv onClick={sidebarClose}><HiX/></CloseDiv>
+        {slydouser && (
+                <div
+                  onClick={toggleMenuDropdown}
+                  style={{ cursor: "pointer", width: "max-content" }}
+                  className="user-toggle"
+                >
+                  <div style={{ width: "35px", height: "35px" }}>
+                    <img style={{ height: "100%", width: "100%" }} src={slydouser.user.avatar}></img>
+                  </div>
+                  <div className="user-info d-none d-md-block">
+                    <span className="user-name dropdown-indicator">{slydouser.user.full_name}</span>
+                  </div>
+                </div>
+              )}
+          <CloseDiv onClick={sidebarClose}>
+            <HiX />
+          </CloseDiv>
         </HeadRight>
       </SidebarHead>
       <Fade>
-        <SidebarHead style={{paddingBottom:"10px" , paddingLeft:"14px" ,fontWeight:500 }}>
+        <SidebarHead style={{ paddingBottom: "10px", paddingLeft: "14px", fontWeight: 500 }}>
           <BackButton onClick={closeSubmenu}>
             <MdKeyboardArrowLeft />
             Back
@@ -42,8 +56,8 @@ const Submenu = ({ sidebarClose, showsubmenu, closeSubmenu }) => {
         <SubmenuDiv>
           {submenuData.map((item, index) => {
             return (
-              <SubmenuItem item={item} key={index}>
-                <SubmenuIcon > {item.icon} </SubmenuIcon> {item.title}
+              <SubmenuItem href={item.path} item={item} key={index}>
+                <SubmenuIcon> {item.icon} </SubmenuIcon> {item.title}
               </SubmenuItem>
             );
           })}
@@ -60,6 +74,7 @@ const Submenu = ({ sidebarClose, showsubmenu, closeSubmenu }) => {
           </LoginButton>
         )}
       </BottomDiv>
+      <SubmenuDropdown isDropdown={isDropdown}></SubmenuDropdown>
     </SidebarContainer>
   );
 };

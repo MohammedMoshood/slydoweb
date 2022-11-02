@@ -163,7 +163,8 @@ const Homepage = () => {
                 chart={<DefaultOrderChart />}
                 amount={"1975"}
               /> */}
-              <img className="" src={CardBanner1} alt="get your payment suite" />
+              {/* WALE COMMENTED */}
+              {/* <img className="" src={CardBanner1} alt="get your payment suite" /> */}
             </Col>
             <Col xxl="6" sm="12">
               {/* <DataCard
@@ -173,10 +174,13 @@ const Homepage = () => {
                 chart={<DefaultOrderChart />}
                 amount={"1975"}
               /> */}
-              <img className="" src={CardBanner2} alt="get your payment suite" />
+              {/* WALE COMMENTED */}
+              {/* <img className="" src={CardBanner2} alt="get your payment suite" /> */}
             </Col>
             <Col xxl="12">
-              <SalesStatistics />
+              {/* WALE COMMENTED */}
+
+              {/* <SalesStatistics /> */}
             </Col>
             {/* <Col xxl="3" md="6">
               <OrderStatistics />

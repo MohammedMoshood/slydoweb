@@ -52,7 +52,7 @@ const menu = [
   {
     icon: "dashboard-fill",
     text: "Dashboard",
-    link: "/",
+    link: "/dashboard",
   },
   // {
   //   icon: "cart-fill",
@@ -69,11 +69,17 @@ const menu = [
     text: "Messages",
     link: "/messages",
   },
-  {
-    icon: "chat-fill",
-    text: "Messages New",
-    link: "/messagesnew",
-  },
+
+  /* WALE COMMENTED */
+  
+  // {
+  //   icon: "chat-fill",
+  //   text: "Messages New",
+  //   link: "/messagesnew",
+  // },
+
+  /*WALE COMMENTS STOPS*/
+
   // {
   //   heading: "Pre-built Pages",
   // },

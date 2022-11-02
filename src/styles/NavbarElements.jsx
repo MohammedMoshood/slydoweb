@@ -147,7 +147,7 @@ export const Download = styled(Link)`
   line-height: 100%;
 
   &:hover {
-    background:  rgba(0, 77, 200, 0.423);
+    background: rgba(0, 77, 200, 0.423);
     color: #fff;
   }
   @media screen and (max-width: 768px) {
@@ -161,13 +161,13 @@ export const ProfileDiv = styled.div`
   background: #f8f8f8;
 `;
 
-//Navmenu
+//Navigation Submennu
 
 export const NavmenuContainer = styled.aside`
   background: #f1f3f6;
   position: absolute;
   top: 90px;
-  left:50%;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 5;
   width: 550px;
@@ -191,10 +191,10 @@ export const NavmenuLink = styled.a`
   display: flex;
   cursor: pointer;
   padding: 10px;
-  gap:5px;
+  gap: 5px;
   justify-content: center;
-  &:hover{
-    background-color: rgba(59, 61, 190, 0.1 );
+  &:hover {
+    background-color: rgba(59, 61, 190, 0.1);
   }
 `;
 
@@ -203,25 +203,62 @@ export const IconDiv = styled.div`
   width: 40px;
   justify-content: center;
   align-items: flex-start;
-`
+`;
 export const Icon = styled.img`
-
-  margin-top: 7px;
+  margin-top: 10px;
   justify-self: flex-start;
-`
+`;
 export const LabelDiv = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-  
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 export const LabelTitle = styled.h6`
-font-family: "Inter";
+  font-family: "Inter";
   font-size: 14px;
-`
+  color: black;
+`;
 export const LabelP = styled.p`
-font-family: "Inter";
-
+  font-family: "Inter";
+  margin-top: -5px;
   font-size: 10px;
-  
-`
+  color: black;
+`;
+
+//Navigation User Dropdown
+
+export const DropdownContainer = styled.aside`
+  font-family: "Inter";
+
+  display: ${({ isDropdown }) => (isDropdown ? "flex" : "none")};
+  background: #f1f3f6;
+  opacity: ${({ isDropdown }) => (isDropdown ? "1" : "0")};
+  position: absolute;
+  top: -5px;
+  flex-direction: column;
+  right: 8%;
+  z-index: 14;
+  width: 294px;
+  height: 178px;
+  transition: 1s ease-in-out all;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 10px;
+`;
+
+export const ItemDiv = styled.a`
+  width: 100%;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  background: white;
+  display: flex;
+  height: 50%;
+  padding-left: 10px;
+  font-family: "Inter";
+  align-items: center;
+  &:hover {
+    background-color: rgba(59, 61, 190, 0.1);
+    color: black;
+  }
+`;

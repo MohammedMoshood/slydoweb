@@ -83,10 +83,11 @@ export const MenuDiv = styled.div`
   align-items: flex-start;
 `;
 
-export const MenuItem = styled.div`
+export const MenuItem = styled.a`
   font-weight: 500;
   width: 100%;
   font-size: 16px;
+  color: black;
   border-bottom: 1px solid rgba(217, 217, 217, 0.3);
   padding: 20px 20px;
   justify-content: space-between;
@@ -153,7 +154,7 @@ export const Fade = styled.div`
   padding: 10px 0;
   margin-top: 10px;
 `;
-export const SubmenuItem = styled.div`
+export const SubmenuItem = styled.a`
   font-weight: 500;
   width: 100%;
   font-size: 16px;

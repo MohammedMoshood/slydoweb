@@ -5,6 +5,7 @@ import { ImAndroid } from "react-icons/im";
 export const Hero = styled.div`
   width: 100%;
   height: max-content;
+  position: relative;
   max-width: 1680px;
   display: flex;
   flex-direction: column;
@@ -43,6 +44,9 @@ export const HeroLeft = styled.div`
   width: 50%;
 
   @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 480px) {
     width: 90%;
   }
 `;
@@ -89,7 +93,7 @@ export const FeaturesDiv = styled.div`
 
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    width: 120%;
+    width: 125%;
   }
 `;
 export const SingleFeature = styled.div`
@@ -151,7 +155,7 @@ export const ButtonDiv = styled.div`
     margin-top: 20px;
     width: 110%;
     justify-content: center;
-    gap:25px;
+    gap: 25px;
   }
 `;
 export const StoreButton = styled.a`
@@ -174,7 +178,7 @@ export const StoreButton = styled.a`
   transition: all 0.5s;
   &:hover {
     background: #3f61db;
-     color:white;
+    color: white;
   }
   @media screen and (max-width: 768px) {
     font-size: 11px;
@@ -217,7 +221,6 @@ export const PhoneImg = styled.img`
     width: 100%;
   }
   @media screen and (max-width: 1200px) {
-  height: 900px;
-
+    height: 900px;
   }
 `;

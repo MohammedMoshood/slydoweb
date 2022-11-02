@@ -14,31 +14,47 @@ import {
 import Logo from "../../images/slydologo.png";
 import { SideData } from "./SidebarData";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import {HiX} from "react-icons/hi"
+import { HiX } from "react-icons/hi";
 import Submenu from "./Submenu";
 import User from "../../layout/header/dropdown/user/User";
-const Sidebar = ({ isOpen, sidebarClose, showsubmenu, openSubmenu, closeSubmenu }) => {
+import { SubmenuDropdown } from "./UserDropdown";
+const Sidebar = ({ isDropdown , toggleMenuDropdown, isOpen, sidebarClose, showsubmenu, openSubmenu, closeSubmenu }) => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
 
   return (
     <SidebarOverlay isOpen={isOpen}>
       {showsubmenu ? (
-        <Submenu sidebarClose={sidebarClose} showsubmenu={showsubmenu} closeSubmenu={closeSubmenu} />
+        <Submenu toggleMenuDropdown={toggleMenuDropdown} isDropdown={isDropdown} sidebarClose={sidebarClose} showsubmenu={showsubmenu} closeSubmenu={closeSubmenu} />
       ) : (
         <SidebarContainer>
           <SidebarHead>
             <SidebarLogo src={Logo} alt="slydo"></SidebarLogo>
             <HeadRight>
-              {slydouser && <User />}
-              <CloseDiv onClick={sidebarClose}><HiX/></CloseDiv>
+              {slydouser && (
+                <div
+                  onClick={toggleMenuDropdown}
+                  style={{ cursor: "pointer", width: "max-content" }}
+                  className="user-toggle"
+                >
+                  <div style={{ width: "35px", height: "35px" }}>
+                    <img style={{ height: "100%", width: "100%" }} src={slydouser.user.avatar}></img>
+                  </div>
+                  <div className="user-info d-none d-md-block">
+                    <span className="user-name dropdown-indicator">{slydouser.user.full_name}</span>
+                  </div>
+                </div>
+              )}
+              <CloseDiv onClick={sidebarClose}>
+                <HiX />
+              </CloseDiv>
             </HeadRight>
           </SidebarHead>
           <MenuDiv>
             {SideData.map((item, index) => {
               const submenu = item.submenu;
               return (
-                <MenuItem onClick={submenu && openSubmenu} style={item.style} key={index}>
+                <MenuItem onClick={submenu && openSubmenu} href={item.path && item.path} style={item.style} key={index}>
                   {item.title} {submenu && <MdKeyboardArrowRight />}{" "}
                 </MenuItem>
               );
@@ -55,6 +71,7 @@ const Sidebar = ({ isOpen, sidebarClose, showsubmenu, openSubmenu, closeSubmenu 
               </LoginButton>
             )}
           </BottomDiv>
+          <SubmenuDropdown isDropdown={isDropdown}></SubmenuDropdown>
         </SidebarContainer>
       )}
     </SidebarOverlay>

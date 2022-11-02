@@ -20,12 +20,16 @@ import Success from "./pages/auth/Success";
 import InvoicePrint from "./pages/pre-built/invoice/InvoicePrint";
 
 import FrontPage from "./pages/FrontPage";
+import UnderConstruction from "./pages/UnderConstruction";
 
 const App = (props) => {
   return (
     <Switch>
       {/* Front Page */}
       <Route exact path="/" component={FrontPage} />
+      <Route exact path="/chat" component={UnderConstruction} />
+      <Route exact path="/socials" component={UnderConstruction} />
+      <Route exact path="/business" component={UnderConstruction} />
 
       {/* Auth Pages */}
       <Route exact path={`${process.env.PUBLIC_URL}/auth-success`} component={Success}></Route>

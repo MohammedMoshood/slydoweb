@@ -16,16 +16,16 @@ import icon4 from "../../images/submenuicons/icon4.png";
 const Navmenu = ({ closeSubnav, subnav }) => {
   return (
     <NavmenuContainer onMouseLeave={closeSubnav} subnav={subnav}>
-      <NavmenuLink>
+      <NavmenuLink href="/chat">
         <IconDiv>
           <Icon style={{height:"20px"}} src={icon1}></Icon>
         </IconDiv>
         <LabelDiv>
-          <LabelTitle>Chats</LabelTitle>
+          <LabelTitle>Chat</LabelTitle>
           <LabelP>Perfect messaging app for personal, group, and business communication</LabelP>
         </LabelDiv>
       </NavmenuLink>{" "}
-      <NavmenuLink>
+      <NavmenuLink href="/business" >
         <IconDiv>
           <Icon style={{height:"20px"}} src={icon2}></Icon>
         </IconDiv>
@@ -34,7 +34,7 @@ const Navmenu = ({ closeSubnav, subnav }) => {
           <LabelP>Set up your store, add products, chat with customers, and accept payments.</LabelP>
         </LabelDiv>
       </NavmenuLink>{" "}
-      <NavmenuLink>
+      <NavmenuLink href="/socials" >
         <IconDiv>
           <Icon style={{height:"20px"}} src={icon3}></Icon>
         </IconDiv>
@@ -43,7 +43,7 @@ const Navmenu = ({ closeSubnav, subnav }) => {
           <LabelP>Share photos and videos on Slydo with friends and family.</LabelP>
         </LabelDiv>
       </NavmenuLink>{" "}
-      <NavmenuLink>
+      <NavmenuLink target="_blank" href="https://developer.slydo.co">
         <IconDiv>
           <Icon style={{height:"20px"}} src={icon4}></Icon>
         </IconDiv>

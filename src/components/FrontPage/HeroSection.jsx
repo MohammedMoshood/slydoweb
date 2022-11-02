@@ -18,14 +18,21 @@ import {
   Apple,
 } from "../../styles/FrontPage/HeroElements";
 import Img from "../../images/qrcode.gif";
-const HeroSection = () => {
+import { UserDropdown } from "./UserDropdown";
+const HeroSection = ({ isDropdown }) => {
+  const user = localStorage.getItem("accessToken");
+  const slydouser = JSON.parse(user);
   return (
     <Hero>
       <HeroContainer>
         <HeroLeft>
-          <HeroH>Social Media and <br/>E-Commerce meets Mobile Payment.</HeroH>
+          <HeroH>
+            Social Media and <br />
+            E-Commerce meets Mobile Payment.
+          </HeroH>
           <HeroP>
-          Slydo is a social media, e-commerce, and mobile payment app that connects people to their friends and the world.
+            Slydo is a social media, e-commerce, and mobile payment app that connects people to their friends and the
+            world.
           </HeroP>
           <FeaturesDiv>
             <SingleFeature>
@@ -54,7 +61,7 @@ const HeroSection = () => {
             </SingleFeature>
           </FeaturesDiv>
           <ButtonDiv>
-            <StoreButton target="_blank" href="https://play.google.com/store/apps/details?id=com.slydo.slydo" >
+            <StoreButton target="_blank" href="https://play.google.com/store/apps/details?id=com.slydo.slydo">
               Play Store <Android />
             </StoreButton>
             <StoreButton>
@@ -66,6 +73,9 @@ const HeroSection = () => {
           <PhoneImg src={Img} alt="Slydomobile" />
         </HeroRight>
       </HeroContainer>
+
+      {/* USER DROPDOWN */}
+      {slydouser && <UserDropdown isDropdown={isDropdown}></UserDropdown>}
     </Hero>
   );
 };

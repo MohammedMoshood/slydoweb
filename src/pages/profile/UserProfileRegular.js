@@ -242,7 +242,7 @@ const UserProfileRegularPage = ({ sm, updateSm, setProfileName }) => {
           >
             <div className="data-col">
               <span className="data-label">Nick Name</span>
-              <span className="data-value">{profile.profile.nickname}</span>
+              <span className="data-value">{profile?.profile?.nickname}</span>
             </div>
             <div className="data-col data-col-end">
               <span className="data-more">
@@ -287,7 +287,7 @@ const UserProfileRegularPage = ({ sm, updateSm, setProfileName }) => {
             <div className="data-col">
               <span className="data-label">Address</span>
               <span className="data-value">
-                {profile.profile.address.address_line_1},&nbsp;{profile.profile.address.address_line_2}
+                {profile?.profile?.address.address_line_1},&nbsp;{profile?.profile?.address.address_line_2}
                 {/* {profileInfo.address}, */}
                 {/* <br />
                 {profileInfo.state}, {profileInfo.country} */}
@@ -303,7 +303,7 @@ const UserProfileRegularPage = ({ sm, updateSm, setProfileName }) => {
             <div className="data-col">
               <span className="data-label">Bio</span>
               <span className="data-value">
-                {profile.profile.bio}
+                {profile?.profile?.bio}
                 {/* {profileInfo.address}, */}
                 {/* <br />
                 {profileInfo.state}, {profileInfo.country} */}
@@ -818,7 +818,7 @@ const UserProfileRegularPage = ({ sm, updateSm, setProfileName }) => {
                         name="address"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        defaultValue={profile.profile.address.address_line_1}
+                        defaultValue={profile?.profile?.address.address_line_1}
                       
                         className="form-control"
                       />
@@ -835,7 +835,7 @@ const UserProfileRegularPage = ({ sm, updateSm, setProfileName }) => {
                         name="address"
                         value={addressLine2}
                         onChange={(e) => setAddressLine2(e.target.value)}
-                        defaultValue={profile.profile.address.address_line_2}
+                        defaultValue={profile?.profile?.address.address_line_2}
                       
                         className="form-control"
                       />
