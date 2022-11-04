@@ -1,29 +1,55 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button } from "../components/Component";
-import ErrorImage from "../images/gfx/error-404.svg";
-import PageContainer from "../layout/page-container/PageContainer";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
-const Error404Modern = () => {
+import ErrorImage from "../images/UnderConstruct.svg";
+
+const UnderConstruction = () => {
   return (
-    <PageContainer>
-      <div className="nk-block nk-block-middle wide-md mx-auto">
-        <div className="nk-block-content nk-error-ld text-center">
-          <img className="nk-error-gfx" src={ErrorImage} alt="error" />
-          <div className="wide-xs mx-auto">
-            <h3 className="nk-error-title"> Page under construction.</h3>
-            <p className="nk-error-text">
-              We are very sorry for any inconvenience. This page is currently under construction .
-            </p>
-            <Link to={`${process.env.PUBLIC_URL}/`}>
-              <Button color="primary" size="lg" className="mt-2">
-                Back To Home
-              </Button>
-            </Link>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <Navbar />
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "1680px",
+          background: "white",
+          padding: "30px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            width: "84%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "0 auto",
+          }}
+        >
+          <img src={ErrorImage} alt="construction"></img>
+          <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", textAlign: "center" }}>
+            <h3>We are working an creating amazing experience just for you. Please check back later.</h3>
+            <button
+              style={{
+                background: "#3F61DB",
+                padding: "5px",
+                width: "150px",
+                outline: "none",
+                border: "none",
+                color: "white",
+                borderRadius: "5px",
+                marginTop: "20px",
+              }}
+            >
+              Back to Home
+            </button>
           </div>
         </div>
       </div>
-    </PageContainer>
+      <Footer />
+    </div>
   );
 };
-export default Error404Modern;
+export default UnderConstruction;

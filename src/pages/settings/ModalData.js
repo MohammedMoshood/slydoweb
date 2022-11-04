@@ -30,7 +30,7 @@ export const CreateTeamMemberModal = () => {
       const [loading, setLoading] = useState(false);
       const history = useHistory();
       // console.log(contacts, 'contacts')
-      const parseContacts = contacts.contacts.map(contact => ({
+      const parseContacts = contacts?.contacts?.map(contact => ({
             value: contact.username,
             label: contact.name,
       }))
