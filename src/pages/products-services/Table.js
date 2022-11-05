@@ -129,11 +129,8 @@ const OrdersTable = () => {
                       ):(
                         <tr>
                           <td colSpan="7">
-                            {/* <div className="spinner-border text-primary m-5" role="status"></div> */}
-                            {/* <img src={emptyicon} className="sm" style={{width: "30px"}} alt="empty state icon" /> */}
                             <h6>No orders found, click the reload button</h6>
                             <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
-                            {/* </div> */}
                           </td>
                         </tr>
                       )
@@ -154,13 +151,8 @@ const OrdersTable = () => {
                       <br/>
                       <br/>
                       <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
-                      {/* <Button color="dark" classNamex="btn-dim rounded-pill badge-sm badge" onClick={() => dispatch(getOrders(1, "", "", ""))}>refresh</Button> */}
                     </h6>
                   </div>
-                  {/* <br/>
-                  <div>
-                    <Icon name="reload" size="50" className="text-dark" onClick={() => dispatch(getOrders(1, "", "", ""))} />
-                  </div> */}
                 </td>
               </tr>
             )
@@ -350,40 +342,71 @@ export const ServiceTable = () => {
                   </div>
                 </td>
               </tr>
-            ): (
-              services?.services?.map((item) => {
-                return (
-                  <tr key={item.id}>
-                    <td>
-                      <div className="user-card text-center">
-                        <UserAvatar theme={item?.avatarBg} image={item?.image}></UserAvatar> &nbsp; &nbsp;
-                        <span style={{textAlign: "left"}}>{item?.serviceName}</span>
-                      </div>
-                    </td>
-                    <td stylex={{width: '20%'}}>
-                      <Badge pill className="btn-dim btn-info">{item.serviceType}</Badge>
-                    </td>
-                    <td style={{width: '20%'}}>{item.description.toString().slice(0,30)}...</td>
-                    <td>
-                      {
-                        (item?.amount/100).toLocaleString("en-NG", {
-                          style: "currency",
-                          currency: "NGN",
-                        })
-                      }
-                    </td>
-                    <td stylex={{width: '20%'}}>{item.serviceProvider}</td>
-                    <td>
-                      <ViewServiceModal data={item} /> <UpdateServiceModal data={item} /> <DeleteServiceModal data={item} />
-                    </td>
-                  </tr>
-                )
-              })
+            ):
+              services.services !== undefined ? (
+                services?.services?.map((item) => {
+                  return (
+                    <>
+                    {
+                      item !== null ? (
+                        <tr key={item.id}>
+                          <td>
+                            <div className="user-card text-center">
+                              <UserAvatar theme={item?.avatarBg} image={item?.image}></UserAvatar> &nbsp; &nbsp;
+                              <span style={{textAlign: "left"}}>{item?.serviceName}</span>
+                            </div>
+                          </td>
+                          <td stylex={{width: '20%'}}>
+                            <Badge pill className="btn-dim btn-info">{item.serviceType}</Badge>
+                          </td>
+                          <td style={{width: '20%'}}>{item.description.toString().slice(0,30)}...</td>
+                          <td>
+                            {
+                              (item?.amount/100).toLocaleString("en-NG", {
+                                style: "currency",
+                                currency: "NGN",
+                              })
+                            }
+                          </td>
+                          <td stylex={{width: '20%'}}>{item.serviceProvider}</td>
+                          <td>
+                            <ViewServiceModal data={item} /> <UpdateServiceModal data={item} /> <DeleteServiceModal data={item} />
+                          </td>
+                        </tr>
+                      ) : (
+                        <tr>
+                          <td colSpan="7">
+                            <h6>No services found, click the reload button</h6>
+                            <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
+                          </td>
+                        </tr>
+                      )
+                    }
+                    </>
+                  )
+                }
+              )
+            ) : (
+              <tr className="text-center">
+                <td colSpan="12">
+                  <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+                  <br/>
+                  <br/>
+                  <div className="mb-5 text-center">
+                    <h6 style={{fontWeight: 400, fontSize: 15}}>
+                      No services found. Click button below to refresh.
+                      <br/>
+                      <br/>
+                      <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
+                    </h6>
+                  </div>
+                </td>
+              </tr>
             )
           }
-          </tbody>
-        </ReactBootStrap.Table>
-        <br />
+        </tbody>
+      </ReactBootStrap.Table>
+      <br />
         <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"

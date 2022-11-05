@@ -11,6 +11,8 @@ import { Badge } from "reactstrap";
 import { UserAvatar, Icon, Button } from "../../slydo-components/Component";
 import { RemoveContactModal, BlockContactModal, RemoveShippingOptionModal, EditShippingOptionModal, RemoveTeamMemberModal, UnblockConnectionModal } from "./ModalData";
 // import { findUpper } from "../../utils/Utils";
+import emptyicon from "../../images/icons/empty-folder.png"
+
 
 const ContactsTable = () => {
   const dispatch = useDispatch()
@@ -36,7 +38,7 @@ const ContactsTable = () => {
         <thead>
           <tr>
             <th>User</th>
-            <th>Username</th>
+            {/* <th>Username</th> */}
             <th>Action</th>
           </tr>
         </thead>
@@ -51,38 +53,69 @@ const ContactsTable = () => {
                 </td>
               </tr>
             ): 
-            contacts?.contacts?.map((item) => {
+            contacts.contacts !== undefined ? (
+              contacts?.contacts?.map((item) => {
                       
-           return (
-                (
-                  <tr key={item?.from_name}>
-                    {/* <td>{item?.from_name}</td> */}
-                    
-                    <td>
-                      <div className="user-card text-center">
-                        <UserAvatar theme={item?.avatarBg} image={item?.image}></UserAvatar> &nbsp; &nbsp;
-                        <span>{item?.name}</span>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="user-card text-center">
-                        <UserAvatar theme={item?.avatarBg} image={item?.to_image}></UserAvatar> &nbsp; &nbsp;
-                        <span>{item?.username}</span>
-                      </div>
-                    </td>
-                    
-
-                    <td>
-                      <RemoveContactModal user={item} /> &nbsp; <BlockContactModal user={item} />
-                    </td>
-                    {/* <td>{item?.paid === true ? "Paid" : "Not paid"}</td> */}
-                    
-                  </tr>
+                return (
+                  <>
+                  {
+                    item !== null ? (
+                      <tr key={item?.from_name}>
+                         {/* <td>{item?.from_name}</td> */}
+                        <td>
+                          <div className="user-card text-center">
+                            <UserAvatar theme={item?.avatarBg} image={item?.image}></UserAvatar> &nbsp; &nbsp;
+                            {/* <span>{item?.name}</span> */}
+                            <div className="user-info">
+                              <span className="lead-text">{item?.name}</span>
+                              <span className="sub-text">@{item?.username}</span>
+                            </div>
+                           </div>
+                         </td>
+                         {/* <td>
+                           <div className="user-card text-center">
+                             <UserAvatar theme={item?.avatarBg} image={item?.to_image}></UserAvatar> &nbsp; &nbsp;
+                             <span>{item?.username}</span>
+                           </div>
+                         </td> */}
+                         <td>
+                           <RemoveContactModal user={item} /> &nbsp; <BlockContactModal user={item} />
+                         </td>
+                         {/* <td>{item?.paid === true ? "Paid" : "Not paid"}</td> */}
+                         
+                       </tr>
+                    ) : (
+                      <tr>
+                        <td colSpan="7">
+                          <h6>No contact found, click the reload button</h6>
+                          <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
+                        </td>
+                      </tr>
+                    )
+                  }
+                  </>
                 )
-              )
-            })
-          }
-        </tbody>
+              }
+            )
+          ) : (
+            <tr className="text-center">
+              <td colSpan="12">
+                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+                <br/>
+                <br/>
+                <div className="mb-5 text-center">
+                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                    No contact found. Click button below to refresh.
+                    <br/>
+                    <br/>
+                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+          )
+        }
+      </tbody>
       </ReactBootStrap.Table>
       <br/>
       <ReactPaginate
@@ -142,7 +175,7 @@ export const BlockedContactsTable = () => {
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        {/* <tbody>
          
           { loading ? (
               <tr className="text-center">
@@ -153,10 +186,12 @@ export const BlockedContactsTable = () => {
                 </td>
               </tr>
             ): 
-              (
-                blockedcontacts?.blockcontact?.map((item) => {
-                  return (
-                    (
+            blockedcontacts.blockcontact !== undefined ? (
+              blockedcontacts?.blockcontact?.map((item) => {
+                return (
+                  <>
+                  {
+                    item !== null ? (
                       <tr key={item?.user}>             
                         <td>
                           <div className="user-card text-center">
@@ -172,12 +207,102 @@ export const BlockedContactsTable = () => {
                           <UnblockConnectionModal user={item}/>
                         </td>                    
                       </tr>
+                    ) : (
+                      <tr>
+                        <td colSpan="7">
+                          <h6>No blocked contact found, click the reload button</h6>
+                          <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
+                        </td>
+                      </tr>
                     )
-                  )
-                })
+                  }
+                  </>
+                )
+              }
               )
+            ) : (
+              <tr className="text-center">
+              <td colSpan="12">
+                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+                <br/>
+                <br/>
+                <div className="mb-5 text-center">
+                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                    No blocked contact found. Click button below to refresh.
+                    <br/>
+                    <br/>
+                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+            )
           }
-        </tbody>
+        </tbody> */}
+        <tbody>
+         
+         { loading ? (
+             <tr className="text-center">
+               <td colSpan="7">
+                 <div className="spinner-border text-primary m-5" role="status">
+                   <span className="sr-only">Loading...</span>
+                 </div>
+               </td>
+             </tr>
+           ): 
+           blockedcontacts.blockcontact !== undefined ? (
+            blockedcontacts?.blockcontact?.map((item) => {
+              return (
+                <>
+                {
+                  item !== null ? (
+                    <tr key={item?.user}>             
+                      <td>
+                        <div className="user-card text-center">
+                          <span>{item?.name}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="user-card text-center">
+                          <span>{item?.username}</span>
+                        </div>
+                      </td>
+                      <td>
+                        <UnblockConnectionModal user={item}/>
+                      </td>                    
+                    </tr>
+                  ) : (
+                    <tr>
+                      <td colSpan="7">
+                        <h6>No blocked contact found, click the reload button</h6>
+                        <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
+                      </td>
+                    </tr>
+                  )
+                }
+                </>
+              )
+            }
+            )
+          ) : (
+            <tr className="text-center">
+            <td colSpan="12">
+              <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+              <br/>
+              <br/>
+              <div className="mb-5 text-center">
+                <h6 style={{fontWeight: 400, fontSize: 15}}>
+                  No blocked contact found. Click button below to refresh.
+                  <br/>
+                  <br/>
+                  <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
+                </h6>
+              </div>
+            </td>
+          </tr>
+          )
+        }
+      </tbody>
       </ReactBootStrap.Table>
       <br/>
       <ReactPaginate
