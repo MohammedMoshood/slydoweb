@@ -1,12 +1,15 @@
 import React from "react";
-import { DropdownContainer, ItemDiv } from "../../styles/NavbarElements";
+import { useNavContext } from "../../context/Context";
+import { DropdownContainer, ItemDiv, SubDropContainer } from "../../styles/NavbarElements";
 import { Icon } from "../Component";
 const user = localStorage.getItem("accessToken");
 const slydouser = JSON.parse(user);
 const handleSignout = () => {
   localStorage.removeItem("accessToken");
 };
-export const UserDropdown = ({ isDropdown }) => {
+
+export const UserDropdown = () => {
+  const { isDropdown } = useNavContext();
   return (
     <DropdownContainer isDropdown={isDropdown}>
       <ItemDiv href={`${process.env.PUBLIC_URL}/dashboard`} style={{ cursor: "pointer" }}>
@@ -28,21 +31,18 @@ export const UserDropdown = ({ isDropdown }) => {
   );
 };
 
-export const SubmenuDropdown = ({ isDropdown }) => {
+export const SubmenuDropdown = () => {
+  const { isMenuDropdown } = useNavContext();
   return (
-    <DropdownContainer style={
-        {
-            top:"90px",
-            right:"10%",
-            height:"110px",
-            padding:"20px"
-        }
-    } isDropdown={isDropdown}>
- 
-      <ItemDiv style={{ gap: "10px", height:"100%" }} href={`${process.env.PUBLIC_URL}/auth-login`} onClick={handleSignout}>
+    <SubDropContainer isMenuDropdown={isMenuDropdown}>
+      <ItemDiv
+        style={{ gap: "10px", height: "100%" }}
+        href={`${process.env.PUBLIC_URL}/auth-login`}
+        onClick={handleSignout}
+      >
         <Icon style={{ fontSize: "24px" }} name="signout"></Icon>
         <span>Sign Out</span>
       </ItemDiv>
-    </DropdownContainer>
+    </SubDropContainer>
   );
 };

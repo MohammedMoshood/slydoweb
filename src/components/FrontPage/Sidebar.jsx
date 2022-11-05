@@ -18,14 +18,23 @@ import { HiX } from "react-icons/hi";
 import Submenu from "./Submenu";
 import User from "../../layout/header/dropdown/user/User";
 import { SubmenuDropdown } from "./UserDropdown";
-const Sidebar = ({ isDropdown , toggleMenuDropdown, isOpen, sidebarClose, showsubmenu, openSubmenu, closeSubmenu }) => {
+import { useNavContext } from "../../context/Context";
+const Sidebar = () => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
+
+  const { isDropdown, toggleMenuDropdown, isOpen, sidebarClose, showsubmenu, openSubmenu, closeSubmenu } = useNavContext();
 
   return (
     <SidebarOverlay isOpen={isOpen}>
       {showsubmenu ? (
-        <Submenu toggleMenuDropdown={toggleMenuDropdown} isDropdown={isDropdown} sidebarClose={sidebarClose} showsubmenu={showsubmenu} closeSubmenu={closeSubmenu} />
+        <Submenu
+          toggleMenuDropdown={toggleMenuDropdown}
+          isDropdown={isDropdown}
+          sidebarClose={sidebarClose}
+          showsubmenu={showsubmenu}
+          closeSubmenu={closeSubmenu}
+        />
       ) : (
         <SidebarContainer>
           <SidebarHead>

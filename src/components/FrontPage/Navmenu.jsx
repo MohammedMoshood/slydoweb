@@ -12,10 +12,12 @@ import icon1 from "../../images/submenuicons/icon1.png";
 import icon2 from "../../images/submenuicons/icon2.png";
 import icon3 from "../../images/submenuicons/icon3.png";
 import icon4 from "../../images/submenuicons/icon4.png";
+import { useNavContext } from "../../context/Context";
 
-const Navmenu = ({ closeSubnav, subnav }) => {
+const Navmenu = () => {
+  const { openSubnav , closeSubnav, subnav } = useNavContext()
   return (
-    <NavmenuContainer onMouseLeave={closeSubnav} subnav={subnav}>
+    <NavmenuContainer onMouseEnter={openSubnav} onMouseLeave={closeSubnav} subnav={subnav}>
       <NavmenuLink href="/chat">
         <IconDiv>
           <Icon style={{height:"20px"}} src={icon1}></Icon>

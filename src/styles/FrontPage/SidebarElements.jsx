@@ -163,6 +163,7 @@ export const SubmenuItem = styled.a`
   cursor: pointer;
   padding-left: 20px;
   display: flex;
+  color:#151515;
   transition: all 0.3s;
   &:hover {
     color: #3f61db;

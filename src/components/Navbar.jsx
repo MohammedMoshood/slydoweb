@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavContext } from "../context/Context";
 import Logo from "../images/slydologo.png";
 import {
   Nav,
@@ -14,22 +15,29 @@ import {
   MenuDiv,
   MenuBars,
 } from "../styles/NavbarElements";
-const Navbar = ({ toggleDropdown , sidebarOpen, openSubnav }) => {
+import Navmenu from "./FrontPage/Navmenu";
+import { UserDropdown } from "./FrontPage/UserDropdown";
+const Navbar = () => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
 
+  const { toggleDropdown , sidebarOpen, openSubnav , closeSubnav , subnav} = useNavContext()  
   return (
+
     <Nav>
+        
       <NavContainer>
         <NavLeft>
           <SLydoLogo src={Logo} alt="Slydo" />
         </NavLeft>
         <NavCenter>
-          <NavItem onMouseEnter={openSubnav} onMouseLeave={openSubnav}>
+          <div onMouseEnter={openSubnav} onMouseLeave={closeSubnav} style={{height:"90px" , justifyContent:"center" , alignItems:"center" , display:"flex"}}>
+          <NavItem   >
             <NavLink className="link-btn" to="">
               Features <Arrow />
             </NavLink>
           </NavItem>
+          </div>
           <NavItem>
             <NavLink href="/business">Business</NavLink>
           </NavItem>
@@ -58,6 +66,9 @@ const Navbar = ({ toggleDropdown , sidebarOpen, openSubnav }) => {
           </MenuDiv>
         </NavRight>
       </NavContainer>
+      <Navmenu />
+       {/* USER DROPDOWN */}
+       {slydouser && <UserDropdown></UserDropdown>}
     </Nav>
   );
 };

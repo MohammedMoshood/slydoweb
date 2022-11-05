@@ -8,9 +8,11 @@ export const Nav = styled.nav`
   align-items: center;
   padding: 24px 0px;
   width: 100%;
+  position: relative;
   max-width: 1680px;
   height: 90px;
-  background: white;
+  background:white;
+  justify-content: center;
   @media screen and (max-width: 768px) {
     height: 70px;
     padding: 10px 0;
@@ -169,7 +171,7 @@ export const NavmenuContainer = styled.aside`
   top: 90px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 10;
   width: 550px;
   height: 250px;
   transition: 1s ease-in-out all;
@@ -234,12 +236,33 @@ export const DropdownContainer = styled.aside`
   background: #f1f3f6;
   opacity: ${({ isDropdown }) => (isDropdown ? "1" : "0")};
   position: absolute;
-  top: -5px;
+  top: 90px;
   flex-direction: column;
   right: 8%;
   z-index: 14;
   width: 294px;
   height: 178px;
+  transition: 1s ease-in-out all;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 10px;
+  @media screen and (max-width: 768px) {
+    top:60px
+  }
+`;
+export const SubDropContainer = styled.aside`
+  font-family: "Inter";
+
+  display: ${({ isMenuDropdown }) => (isMenuDropdown ? "flex" : "none")};
+  background: #f1f3f6;
+  opacity: ${({ isMenuDropdown }) => (isMenuDropdown ? "1" : "0")};
+  position: absolute;
+  top: 90px;
+  flex-direction: column;
+  right: 10%;
+  z-index: 14;
+  width: 294px;
+  height: 110px;
   transition: 1s ease-in-out all;
   padding: 20px;
   border-radius: 10px;

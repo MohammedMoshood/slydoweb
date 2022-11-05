@@ -2,10 +2,20 @@ import React from "react";
 import classNames from "classnames";
 import Toggle from "../sidebar/Toggle";
 import Logo from "../logo/Logo";
+import BetaLogo from "../logo/BetaLogo";
 import User from "./dropdown/user/User";
 import Notification from "./dropdown/notification/Notification";
 import HeaderSearch from "../header-search/HeaderSearch";
+import BetaHeaderSearch from "../header-search/HeaderSearch";
 import ChatDropdown from "./dropdown/chat/Chat";
+import {
+  Block,
+  BlockHead, BlockBetween,
+  BlockHeadContent,
+  BlockTitle,
+  PreviewCard,
+  ReactDataTable, Icon, Row, Col, RSelect, BlockDes, Button
+} from "../../slydo-components/Component";
 
 const Header = ({ fixed, theme, className, setVisibility, ...props }) => {
   const headerClass = classNames({
@@ -40,7 +50,9 @@ const Header = ({ fixed, theme, className, setVisibility, ...props }) => {
               <li className="notification-dropdown mr-n1"  onClick={() => setVisibility(false)}>
                 <Notification />
               </li> */}
+              <BetaLogo/>
               <li className="user-dropdown"  onClick={() => setVisibility(false)}>
+                {/* <BetaLogo /> */}
                 <User />
               </li>
             </ul>

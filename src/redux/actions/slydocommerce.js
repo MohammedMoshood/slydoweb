@@ -649,7 +649,8 @@ export const updateProduct = (product) => async (dispatch) => {
 export const getServices = (page) => async (dispatch) => {
   dispatch({type: GET_SLYDO_COMMERCE_LOADING})
   try {
-    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/v1/services/?page=${page}&page_size=10`, {
+    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/v1/services/by-provider/japa/?page=${page}&page_size=10`, {
+    // const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/v1/services/?page=${page}&page_size=10`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + JSON.parse(localStorage.getItem("accessToken")).refresh,

@@ -19,7 +19,7 @@ import {
 } from "../../styles/FrontPage/HeroElements";
 import Img from "../../images/qrcode.gif";
 import { UserDropdown } from "./UserDropdown";
-const HeroSection = ({ isDropdown }) => {
+const HeroSection = () => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
   return (
@@ -27,7 +27,7 @@ const HeroSection = ({ isDropdown }) => {
       <HeroContainer>
         <HeroLeft>
           <HeroH>
-            Social Media and <br />
+            Social Media &amp; <br />
             E-Commerce meets Mobile Payment.
           </HeroH>
           <HeroP>
@@ -74,8 +74,7 @@ const HeroSection = ({ isDropdown }) => {
         </HeroRight>
       </HeroContainer>
 
-      {/* USER DROPDOWN */}
-      {slydouser && <UserDropdown isDropdown={isDropdown}></UserDropdown>}
+     
     </Hero>
   );
 };
