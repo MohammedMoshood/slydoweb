@@ -9,6 +9,8 @@ import styled from "styled-components";
 
 const RightDiv = styled.div`
   display: flex;
+  width: 90%;
+  justify-content: flex-end;
   @media screen and (max-width: 1020px) {
     width: 100%;
     justify-content: center;
@@ -16,7 +18,6 @@ const RightDiv = styled.div`
 `;
 const LeftDiv = styled.div`
   width: 50%;
-
   margin-bottom: 100px;
   @media screen and (max-width: 1020px) {
     width: 100%;
@@ -39,6 +40,8 @@ const FeatureDiv = styled.div`
 const Text = styled.h2`
   margin-top: 40px;
   font-size: 50px;
+  font-weight: 500;
+  color: #1A191E;
   @media screen and (max-width: 1020px) {
     font-size: 30px;
   }
@@ -97,14 +100,15 @@ const FeatureText = styled.p`
 
 const ConstructionDiv = styled.div`
   width: 84%;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: center;
   margin: 0 auto;
   padding-top: 50px;
   @media screen and (max-width: 1020px) {
     flex-direction: column;
+  justify-content: center;
     align-items: center;
 
   }

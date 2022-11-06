@@ -33,39 +33,39 @@ const Footer = () => {
             <AboutMenu>
               <MenuHeader> About</MenuHeader>
               <MenuItem>
-                <MenuLink  href="#">Features</MenuLink>
+                <MenuLink  href="/features">Features</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="#">Pricing</MenuLink>
+                <MenuLink  href="/pricing">Pricing</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="#">Support</MenuLink>
+                <MenuLink  href="/support">Support</MenuLink>
               </MenuItem>
             </AboutMenu>
 
             <BlogMenu>
               <MenuHeader>Blog</MenuHeader>
               <MenuItem>
-                <MenuLink  href="#">Product</MenuLink>
+                <MenuLink  href="/product">Product</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="#">Services</MenuLink>
+                <MenuLink  href="/services">Services</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="#">Technology</MenuLink>
+                <MenuLink  href="/technology">Technology</MenuLink>
               </MenuItem>
             </BlogMenu>
 
             <WebflowMenu>
               <MenuHeader>Business</MenuHeader>
               <MenuItem>
-                <MenuLink  href="#">Contract</MenuLink>
+                <MenuLink  href="/contract">Contract</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="#">Invoice</MenuLink>
+                <MenuLink  href="/invoice">Invoice</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="#">Payment</MenuLink>
+                <MenuLink  href="/payment">Payment</MenuLink>
               </MenuItem>
             </WebflowMenu>
 
@@ -86,8 +86,8 @@ const Footer = () => {
         <BottomLineDiv>
           <SlydoInc>@ 2022 Slydo inc.</SlydoInc>
           <TandCDiv>
-            <TandC to="">Terms and Conditions</TandC>
-            <PrivacyPolicy to="">Privacy Policy</PrivacyPolicy>
+            <TandC to="/termsandconditions">Terms and Conditions</TandC>
+            <PrivacyPolicy to="/privacypolicy">Privacy Policy</PrivacyPolicy>
           </TandCDiv>
         </BottomLineDiv>
       </FooterContainer>
