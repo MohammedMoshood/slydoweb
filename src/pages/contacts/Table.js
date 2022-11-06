@@ -274,7 +274,7 @@ export const BlockedContactsTable = () => {
                   ) : (
                     <tr>
                       <td colSpan="7">
-                        <h6>No blocked contact found, click the reload button</h6>
+                        <h6>No Blocked Contact found, click the reload button</h6>
                         <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
                       </td>
                     </tr>
@@ -292,7 +292,7 @@ export const BlockedContactsTable = () => {
               <br/>
               <div className="mb-5 text-center">
                 <h6 style={{fontWeight: 400, fontSize: 15}}>
-                  No Blocked contact found. Click button below to refresh.
+                  No Blocked Contact found. Click button below to refresh.
                   <br/>
                   <br/>
                   <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getBlockedContacts(1, "", "", ""))}>Refresh</Button>
@@ -304,7 +304,7 @@ export const BlockedContactsTable = () => {
         }
       </tbody>
       </ReactBootStrap.Table>
-      <br/>
+      {/* <br/>
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -327,7 +327,7 @@ export const BlockedContactsTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   
   );

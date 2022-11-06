@@ -14,6 +14,7 @@ import {
   PreviewCard,
   ReactDataTable,
 } from "../../slydo-components/Component";
+import emptyicon from "../../images/icons/empty-folder.png"
 import { UncontrolledDropdown, DropdownMenu, DropdownItem, DropdownToggle } from "reactstrap";
 import { paymentContractTable, payoutsData } from "./TableData";
 import { useSelector, useDispatch } from "react-redux"
@@ -59,15 +60,32 @@ const PaymentContract = () => {
         </BlockHead>
         
         <PreviewCard>
-          { loading ? <p className="text-center">loading...</p> :
+        {  paymentContract.paymentContract !== undefined ? (
+           loading ? <p className="text-center">loading...</p> :
             <ReactDataTable
               data={paymentContract}
               columns={paymentContractTable}
               pagination
               className="nk-tb-list"
               selectableRows
-            />
-          }
+            ></ReactDataTable>
+          ) :  (
+            <tr className="text-center">
+              <td colSpan="12">
+                <img className="mt-5" src={emptyicon} style={{width: '5%'}} alt="" />
+                <br/>
+                <br/>
+                <div className="mb-5 text-center">
+                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                    No Payment Contracts found. Click button below to refresh.
+                    <br/>
+                    <br/>
+                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getPaymentContract(1, "", "", ""))}>Refresh</Button>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+          ) }
           </PreviewCard>
       </Content>
     </React.Fragment>

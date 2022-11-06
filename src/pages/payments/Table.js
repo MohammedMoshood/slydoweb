@@ -158,7 +158,7 @@ const TransactionsTable = () => {
         </tbody>
       </ReactBootStrap.Table>
       <br />
-      <ReactPaginate
+      {/* <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
         pageClassName="page-item"
@@ -180,7 +180,7 @@ const TransactionsTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   );
 };
@@ -296,7 +296,7 @@ export const PaymentRequestTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      <br />
+      {/* <br />
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -319,7 +319,7 @@ export const PaymentRequestTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   );
 };
@@ -420,7 +420,7 @@ export const PayoutTable = () => {
         </tbody>
       </ReactBootStrap.Table>
       <br />
-      <ReactPaginate
+      {/* <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
         pageClassName="page-item"
@@ -442,7 +442,7 @@ export const PayoutTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   );
 };
@@ -652,7 +652,7 @@ export const BankAccountTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      <br />
+      {/* <br />
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -675,7 +675,7 @@ export const BankAccountTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   );
 };

@@ -129,7 +129,7 @@ const OrdersTable = () => {
                       ):(
                         <tr>
                           <td colSpan="7">
-                            <h6>No orders found, click the reload button</h6>
+                            <h6>No Orders found, click the reload button</h6>
                             <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
                           </td>
                         </tr>
@@ -147,7 +147,7 @@ const OrdersTable = () => {
                   <br/>
                   <div className="mb-5 text-center">
                     <h6 style={{fontWeight: 400, fontSize: 15}}>
-                      No orders found. Click button below to refresh.
+                      No Orders found. Click button below to refresh.
                       <br/>
                       <br/>
                       <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
@@ -159,7 +159,7 @@ const OrdersTable = () => {
           }
         </tbody>
       </ReactBootStrap.Table>
-      <br/>
+      {/* <br/>
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -182,7 +182,7 @@ const OrdersTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   
   );
@@ -376,7 +376,7 @@ export const ServiceTable = () => {
                       ) : (
                         <tr>
                           <td colSpan="7">
-                            <h6>No services found, click the reload button</h6>
+                            <h6>No Services found, click the reload button</h6>
                             <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
                           </td>
                         </tr>
@@ -394,7 +394,7 @@ export const ServiceTable = () => {
                   <br/>
                   <div className="mb-5 text-center">
                     <h6 style={{fontWeight: 400, fontSize: 15}}>
-                      No services found. Click button below to refresh.
+                      No Services found. Click button below to refresh.
                       <br/>
                       <br/>
                       <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
@@ -406,7 +406,7 @@ export const ServiceTable = () => {
           }
         </tbody>
       </ReactBootStrap.Table>
-      <br />
+      {/* <br />
         <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -428,7 +428,7 @@ export const ServiceTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
-        </div>
+      /> */}
+    </div>
 )                
 }
