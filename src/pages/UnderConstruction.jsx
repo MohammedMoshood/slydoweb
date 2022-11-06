@@ -9,7 +9,6 @@ import styled from "styled-components";
 
 const RightDiv = styled.div`
   display: flex;
-  width: 90%;
   justify-content: flex-end;
   @media screen and (max-width: 1020px) {
     width: 100%;
@@ -105,6 +104,7 @@ const ConstructionDiv = styled.div`
   flex-direction: row;
   align-items: flex-end;
   margin: 0 auto;
+  justify-content: space-between;
   padding-top: 50px;
   @media screen and (max-width: 1020px) {
     flex-direction: column;
