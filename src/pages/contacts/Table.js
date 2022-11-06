@@ -292,10 +292,10 @@ export const BlockedContactsTable = () => {
               <br/>
               <div className="mb-5 text-center">
                 <h6 style={{fontWeight: 400, fontSize: 15}}>
-                  No blocked contact found. Click button below to refresh.
+                  No Blocked contact found. Click button below to refresh.
                   <br/>
                   <br/>
-                  <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getOrders(1, "", "", ""))}>Refresh</Button>
+                  <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getBlockedContacts(1, "", "", ""))}>Refresh</Button>
                 </h6>
               </div>
             </td>

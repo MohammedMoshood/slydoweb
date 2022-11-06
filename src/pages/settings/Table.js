@@ -12,7 +12,7 @@ import ReactPaginate from 'react-paginate';
 import { Badge } from "reactstrap";
 import { UserAvatar, Icon, Button } from "../../slydo-components/Component";
 import { findUpper } from "../../utils/Utils";
-
+import emptyicon from "../../images/icons/empty-folder.png"
 
 export const TeamMembersTable = () => {
   const dispatch = useDispatch()
@@ -55,7 +55,7 @@ export const TeamMembersTable = () => {
                 </td>
               </tr>
             ): 
-
+            teamMembers.teamMembers !== undefined ? (
             teamMembers?.teammembers?.map((item) => {
                       
               // const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
@@ -99,7 +99,23 @@ export const TeamMembersTable = () => {
                 )
               )
             })
-          }
+         ) : (
+          <tr className="text-center">
+            <td colSpan="12">
+              <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+              <br/>
+              <br/>
+              <div className="mb-5 text-center">
+                <h6 style={{fontWeight: 400, fontSize: 15}}>
+                  No Team Members found. Click button below to refresh.
+                  <br/>
+                  <br/>
+                  <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getTeamMembers(1, "", "", ""))}>Refresh</Button>
+                </h6>
+              </div>
+            </td>
+          </tr>
+        ) }
         </tbody>
       </ReactBootStrap.Table>
       <br/>
@@ -169,7 +185,7 @@ export const ShippingOptionsTable = () => {
                   </div>
                 </td>
               </tr>    
-              ): (
+              ): shippingOptions.shippingOptions !== undefined ? (
                 shippingOptions?.shippingoptions?.map((item) => {
                   // const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
                   // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
@@ -210,6 +226,22 @@ export const ShippingOptionsTable = () => {
  
                   )
                 })
+              )  : (
+                <tr className="text-center">
+                  <td colSpan="12">
+                    <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+                    <br/>
+                    <br/>
+                    <div className="mb-5 text-center">
+                      <h6 style={{fontWeight: 400, fontSize: 15}}>
+                        No Shipping options found. Click button below to refresh.
+                        <br/>
+                        <br/>
+                        <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getShippingOptions(1, "", "", ""))}>Refresh</Button>
+                      </h6>
+                    </div>
+                  </td>
+                </tr>
               )
             }
           </tbody>
