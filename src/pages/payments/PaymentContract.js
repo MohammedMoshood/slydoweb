@@ -59,7 +59,7 @@ const PaymentContract = () => {
           </BlockBetween>
         </BlockHead>
         
-        <PreviewCard>
+        <PreviewCard className="text-center">
         {  paymentContract.paymentContract !== undefined ? (
            loading ? <p className="text-center">loading...</p> :
             <ReactDataTable

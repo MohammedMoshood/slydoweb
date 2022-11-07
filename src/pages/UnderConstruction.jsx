@@ -182,7 +182,7 @@ const UnderConstruction = () => {
               </BottomDiv>
             </FeatureDiv>
             <Text>
-              We are creating <br /> an amazing experience <br /> Please check back
+              We are creating <br /> an amazing experience, <br /> coming soon.
             </Text>
           </LeftDiv>
           <RightDiv>

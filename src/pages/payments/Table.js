@@ -133,31 +133,32 @@ const TransactionsTable = () => {
                 </>
               );
             })
-          ) : ( <tr className="text-center">
-          <td colSpan="12">
-            <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
-            <br />
-            <br />
-            <div className="mb-5 text-center">
-              <h6 style={{ fontWeight: 400, fontSize: 15 }}>
-                No Transactions found. Click button below to refresh.
-                <br />
-                <br />
-                <Button
-                  pill
-                  className=" btn-outline-dark btn-xs btn-round"
-                  onClick={() => dispatch(getTransactions(1, "", "", ""))}
-                >
-                  Refresh
-                </Button>
-              </h6>
-            </div>
-          </td>
+          ) : ( 
+          <tr className="text-center">
+            <td colSpan="12">
+              <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
+              <br />
+              <br />
+              <div className="mb-5 text-center">
+                <h6 style={{ fontWeight: 400, fontSize: 15 }}>
+                  No Transactions found. Click button below to refresh.
+                  <br />
+                  <br />
+                  <Button
+                    pill
+                    className=" btn-outline-dark btn-xs btn-round"
+                    onClick={() => dispatch(getTransactions(1, "", "", ""))}
+                  >
+                    Refresh
+                  </Button>
+                </h6>
+              </div>
+            </td>
         </tr>)
         }
         </tbody>
       </ReactBootStrap.Table>
-      <br />
+      {/* <br /> */}
       {/* <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
