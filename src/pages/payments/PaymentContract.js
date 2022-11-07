@@ -70,7 +70,8 @@ const PaymentContract = () => {
               selectableRows
             ></ReactDataTable>
           ) :  (
-            <tr className="text-center">
+            <div style={{display:"flex" , justifyContent:"center"}}>
+            <tr className="text-center" >
               <td colSpan="12">
                 <img className="mt-5" src={emptyicon} style={{width: '5%'}} alt="" />
                 <br/>
@@ -85,6 +86,7 @@ const PaymentContract = () => {
                 </div>
               </td>
             </tr>
+            </div>
           ) }
           </PreviewCard>
       </Content>

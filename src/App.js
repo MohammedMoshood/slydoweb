@@ -36,9 +36,9 @@ const App = (props) => {
         <Route exact path="/pricing" component={UnderConstruction} />
         <Route exact path="/support" component={UnderConstruction} />
         <Route exact path="/product" component={UnderConstruction} />
-        <Route exact path="/services" component={UnderConstruction} />
+        <Route exact path="/our-services" component={UnderConstruction} />
         <Route exact path="/technology" component={UnderConstruction} />
-        <Route exact path="/invoice" component={UnderConstruction} />
+        <Route exact path="/slydo-invoice" component={UnderConstruction} />
         <Route exact path="/payment" component={UnderConstruction} />
         <Route exact path="/contract" component={UnderConstruction} />
         <Route exact path="/termsandconditions" component={UnderConstruction} />

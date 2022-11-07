@@ -49,7 +49,7 @@ const Footer = () => {
                 <MenuLink  href="/product">Product</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="/services">Services</MenuLink>
+                <MenuLink  href="/our-services">Services</MenuLink>
               </MenuItem>
               <MenuItem>
                 <MenuLink  href="/technology">Technology</MenuLink>
@@ -62,7 +62,7 @@ const Footer = () => {
                 <MenuLink  href="/contract">Contract</MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink  href="/invoice">Invoice</MenuLink>
+                <MenuLink  href="/slydo-invoice">Invoice</MenuLink>
               </MenuItem>
               <MenuItem>
                 <MenuLink  href="/payment">Payment</MenuLink>

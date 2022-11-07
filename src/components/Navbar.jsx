@@ -21,22 +21,26 @@ const Navbar = () => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
 
-  const { toggleDropdown , sidebarOpen, openSubnav , closeSubnav , subnav} = useNavContext()  
+  const { toggleDropdown, sidebarOpen, openSubnav, closeSubnav, subnav } = useNavContext();
   return (
-
     <Nav>
-        
       <NavContainer>
         <NavLeft>
-          <SLydoLogo src={Logo} alt="Slydo" />
+          <a href="/">
+            <SLydoLogo src={Logo} alt="Slydo" />
+          </a>
         </NavLeft>
         <NavCenter>
-          <div onMouseEnter={openSubnav} onMouseLeave={closeSubnav} style={{height:"90px" , justifyContent:"center" , alignItems:"center" , display:"flex"}}>
-          <NavItem   >
-            <NavLink className="link-btn" to="">
-              Features <Arrow />
-            </NavLink>
-          </NavItem>
+          <div
+            onMouseEnter={openSubnav}
+            onMouseLeave={closeSubnav}
+            style={{ height: "90px", justifyContent: "center", alignItems: "center", display: "flex" }}
+          >
+            <NavItem>
+              <NavLink className="link-btn" to="">
+                Features <Arrow />
+              </NavLink>
+            </NavItem>
           </div>
           <NavItem>
             <NavLink href="/business">Business</NavLink>
@@ -49,14 +53,17 @@ const Navbar = () => {
         </NavCenter>
         <NavRight>
           {slydouser ? (
-            <div onClick={toggleDropdown} style={{cursor:"pointer" , width:"max-content" , gap:"10px" }} className="user-toggle">
-              <div style={{width:"35px" , height:"35px"}} >
+            <div
+              onClick={toggleDropdown}
+              style={{ cursor: "pointer", width: "max-content", gap: "10px" }}
+              className="user-toggle"
+            >
+              <div style={{ width: "35px", height: "35px" }}>
                 <img style={{ height: "100%", width: "100%" }} src={slydouser.user.avatar}></img>
               </div>
-              <div className="user-info d-none d-md-block" >
-              <span className="user-name dropdown-indicator">{slydouser.user.full_name}</span>
+              <div className="user-info d-none d-md-block">
+                <span className="user-name dropdown-indicator">{slydouser.user.full_name}</span>
               </div>
-             
             </div>
           ) : (
             <Download to={`${process.env.PUBLIC_URL}/auth-login`}>Login</Download>
@@ -67,8 +74,8 @@ const Navbar = () => {
         </NavRight>
       </NavContainer>
       <Navmenu />
-       {/* USER DROPDOWN */}
-       {slydouser && <UserDropdown></UserDropdown>}
+      {/* USER DROPDOWN */}
+      {slydouser && <UserDropdown></UserDropdown>}
     </Nav>
   );
 };
