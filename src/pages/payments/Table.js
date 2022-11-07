@@ -9,6 +9,7 @@ import {
   getPayouts,
   getInvoice,
   getBankAccounts,
+  getPaymentContract,
 } from "../../redux/actions/payments";
 import ReactPaginate from "react-paginate";
 // import { AddNoteToOrderModal, ViewOrderModal, UpdateOrderStatusModal, ViewProductModal, ViewServiceModal, UpdateProductModal, UpdateServiceModal, DeleteProductModal, DeleteServiceModal } from "./ModalData";
@@ -579,6 +580,143 @@ export const InvoiceTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
+    </div>
+  );
+};
+
+//Payment Contract
+export const PaymentContractTable = () => {
+  const { paymentContract, loading } = useSelector((state) => state.payments);
+  const { user } = useSelector((state) => state.user);
+  const [pageOffset, setPageOffset] = useState(0);
+  const dispatch = useDispatch();
+  console.log(paymentContract, "the payment contract");
+  const handlePageClick = (event) => {
+    console.log(event?.selected + 1, "the event of pagination clicking");
+    setPageOffset(event?.selected);
+    dispatch(getPaymentContract(user.username, event?.selected + 1));
+  };
+  useEffect(() => {
+    dispatch(getPaymentContract());
+  }, [dispatch]);
+  return (
+    <div>
+      <ReactBootStrap.Table striped bordered hover sort>
+        <thead>
+          <tr>
+            {/* <th></th> */}
+            <th>From Customer</th>
+            <th>To Customer</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Date &amp; Time</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {loading ? (
+            <tr className="text-center">
+              <td colSpan="7">
+                <div className="spinner-border text-primary m-5" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </td>
+            </tr>
+          ) : paymentContract.paymentContract !== undefined ? (
+            paymentContract?.paymentContract?.map((item, index) => {
+              const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
+              const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
+              return (
+                <tr key={item.id}>
+                  <td>
+                    <div className="user-card text-center">
+                      <UserAvatar theme={item?.avatarBg} image={item?.from_image}></UserAvatar> &nbsp; &nbsp;
+                      <span style={{ textAlign: "left" }}>{item?.from_name}</span>
+                    </div>
+                  </td>
+                  <td style={{ width: "20%" }}>
+                    <div className="user-card text-center">
+                      <UserAvatar theme={item?.avatarBg} image={item?.to_image}></UserAvatar> &nbsp; &nbsp;
+                      <span style={{ textAlign: "left" }}>{item?.to_name}</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    {(item?.amount / 100).toLocaleString("en-NG", {
+                      style: "currency",
+                      currency: "NGN",
+                    })}
+                  </td>
+                  {/* <td style={{width: '20%'}}>{item?.description}</td>
+                      <td>{item.category}</td> */}
+                  <td>
+                    <Badge
+                      pill
+                      className={`tb-status btn-dim ml-1 btn-${
+                        item.inout === "success" ? "success" : item.inout === "Pending" ? "warning" : "secondary"
+                      }`}
+                    >
+                      {item?.inout}
+                    </Badge>
+                  </td>
+                  {/* <td>
+                        {item?.condition}
+                      </td> */}
+                  <td>
+                    {dateFormat}{" "}
+                    <span className="text-secondary" style={{ fontWeight: 500 }}>
+                      • {timeFormat}
+                    </span>
+                  </td>
+                  <td>
+                    <PaymentRequestsModal />
+                  </td>
+                </tr>
+              );
+            })
+          )  : (
+            <tr className="text-center">
+              <td colSpan="12">
+                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+                <br/>
+                <br/>
+                <div className="mb-5 text-center">
+                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                    No Payment Contract found. Click button below to refresh.
+                    <br/>
+                    <br/>
+                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getPaymentRequest(1, "", "", ""))}>Refresh</Button>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </ReactBootStrap.Table>
+      {/* <br />
+      <ReactPaginate
+        previousLabel="Previous"
+        nextLabel="Next"
+        pageClassName="page-item"
+        pageLinkClassName="page-link"
+        previousClassName="page-item"
+        previousLinkClassName="page-link"
+        nextClassName="page-item"
+        nextLinkClassName="page-link"
+        breakLabel="..."
+        breakClassName="page-item"
+        breakLinkClassName="page-link"
+        pageCount={Math.round(paymentRequest.count / 10)}
+        // pageCount={Math.round(orders?.count/orders?.orders?.length)}
+        pageRange={2}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName="pagination"
+        subContainerClassName={"pages pagination"}
+        activeClassName="active"
+        forcePage={pageOffset}
+      /> */}
     </div>
   );
 };

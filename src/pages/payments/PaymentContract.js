@@ -21,6 +21,7 @@ import { UncontrolledDropdown, DropdownMenu, DropdownItem, DropdownToggle } from
 import { paymentContractTable, payoutsData } from "./TableData";
 import { useSelector, useDispatch } from "react-redux";
 import { getPaymentContract } from "../../redux/actions/payments";
+import { PaymentContractTable } from "./Table";
 
 const PaymentContract = () => {
   const [sm, updateSm] = useState(false);
@@ -61,70 +62,18 @@ const PaymentContract = () => {
           </BlockBetween>
         </BlockHead>
 
-        <ReactBootStrap.Table striped bordered hover sort>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Image</th>
-              <th>Payment Duration</th>
-              <th>Start Date</th>
-              <th>End Date </th>
-              <th>Amount</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loading ? (
-              <tr className="text-center">
-                <td colSpan="7">
-                  <div className="spinner-border text-primary m-5" role="status">
-                    <span className="sr-only">Loading...</span>
-                  </div>
-                </td>
-              </tr>
-            ) : paymentContract.paymentContract !== undefined ? (
-              paymentContract?.paymentContract?.map((item, index) => {
-                // const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
-                // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
-                console.log(item);
-                return (
-                  <tr key={item?.id}>
-                    {/* <td>{item?.from_name}</td> */}
-                    <td></td>
-                    <td> </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                );
-              })
-            ) : (
-              <tr className="text-center">
-                <td colSpan="12">
-                  <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
-                  <br />
-                  <br />
-                  <div className="mb-5 text-center">
-                    <h6 style={{ fontWeight: 400, fontSize: 15 }}>
-                      No Bank Accounts found. Click button below to refresh.
-                      <br />
-                      <br />
-                      <Button
-                        pill
-                        className=" btn-outline-dark btn-xs btn-round"
-                        onClick={() => dispatch(getPaymentContract(1, "", "", ""))}
-                      >
-                        Refresh
-                      </Button>
-                    </h6>
-                  </div>
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </ReactBootStrap.Table>
+        <PreviewCard>
+          <PaymentContractTable/>
+          {/* {loading ? <p className="text-center">loading...</p> :
+            <ReactDataTable
+              data={paymentRequest}
+              columns={paymentRequestsTable}
+              pagination
+              className="nk-tb-list"
+              selectableRows
+            />
+          } */}
+        </PreviewCard>
       </Content>
     </React.Fragment>
   );
