@@ -118,7 +118,7 @@ export const TeamMembersTable = () => {
         ) }
         </tbody>
       </ReactBootStrap.Table>
-      <br/>
+      {/* <br/>
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -141,7 +141,7 @@ export const TeamMembersTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   
   );
@@ -246,7 +246,7 @@ export const ShippingOptionsTable = () => {
             }
           </tbody>
         </ReactBootStrap.Table>
-        <br/>
+        {/* <br/>
         <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -268,7 +268,7 @@ export const ShippingOptionsTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
       </div>
     )
 };
