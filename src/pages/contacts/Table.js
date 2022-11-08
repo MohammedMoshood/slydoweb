@@ -275,7 +275,7 @@ export const BlockedContactsTable = () => {
                     <tr>
                       <td colSpan="7">
                         <h6>No Blocked Contact found, click the reload button</h6>
-                        <Icon name="reload" className="text-primary" onClick={() => dispatch(getOrders(1, "", "", ""))} />
+                        <Icon name="reload" className="text-primary" onClick={() => dispatch(getBlockedContacts(1, "", "", ""))} />
                       </td>
                     </tr>
                   )

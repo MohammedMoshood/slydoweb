@@ -233,6 +233,7 @@ export const ProductsTable = () => {
                 </td>
               </tr>    
               ): (
+                products.products !== undefined ? (
                 products?.products?.map((item) => {
                   const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
                   const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
@@ -272,7 +273,23 @@ export const ProductsTable = () => {
                     </tr>
  
                   )
-                })
+                })) :(
+                  <tr className="text-center">
+                  <td colSpan="12">
+                    <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
+                    <br/>
+                    <br/>
+                    <div className="mb-5 text-center">
+                      <h6 style={{fontWeight: 400, fontSize: 15}}>
+                        No Products found, Click button below to refresh.
+                        <br/>
+                        <br/>
+                        <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getProducts(1, "", "", ""))}>Refresh</Button>
+                      </h6>
+                    </div>
+                  </td>
+                </tr>
+                )
               )
             }
           </tbody>

@@ -66,7 +66,7 @@ const AllMessagesTable = () => {
                 </td>
               </tr>
             ) : (
-              allMessages.allMessages !== undefined ? (
+              allMessages.length !== 0 ? (
               allMessages?.map((item) => {
                 // const dateFormat = new Date(item?.timeSent).toLocaleDateString();
                 // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
@@ -242,7 +242,7 @@ export const ArchivedTable = () => {
                 </div>
               </td>
             </tr>
-          ) : archivedMessages.archivedMessages !== undefined ? (
+          ) : archivedMessages.length !== 0 ? (
             archivedMessages?.map((item) => {
               return (
                 <tr key={item.id}>
@@ -303,7 +303,7 @@ export const ArchivedTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      <br />
+      {/* <br />
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -326,7 +326,7 @@ export const ArchivedTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   );
 };
@@ -367,7 +367,7 @@ export const StarredTable = () => {
                 </div>
               </td>
             </tr>
-          ) : starredMessages.starredMessages !== undefined ? (
+          ) : starredMessages.length !== 0 ? (
             starredMessages?.map((item) => {
               // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
 
@@ -429,7 +429,7 @@ export const StarredTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      <br />
+      {/* <br />
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -452,7 +452,7 @@ export const StarredTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   );
 };
@@ -493,7 +493,7 @@ export const SentmessagesTable = () => {
                 </div>
               </td>
             </tr>
-          ) : sentMessages.sentMessages !== undefined ? (
+          ) : sentMessages.length !== 0 ? (
             sentMessages?.map((item) => {
               // const dateFormat = new Date(item?.timeSent).toLocaleDateString();
               // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
@@ -570,7 +570,7 @@ export const SentmessagesTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      <br />
+      {/* <br />
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -593,7 +593,7 @@ export const SentmessagesTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> */}
     </div>
   );
 };

@@ -55,7 +55,7 @@ export const TeamMembersTable = () => {
                 </td>
               </tr>
             ): 
-            teamMembers.teamMembers !== undefined ? (
+            teamMembers.length !== 0 ? (
             teamMembers?.teammembers?.map((item) => {
                       
               // const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
@@ -185,7 +185,7 @@ export const ShippingOptionsTable = () => {
                   </div>
                 </td>
               </tr>    
-              ): shippingOptions.shippingOptions !== undefined ? (
+              ): shippingOptions.length !== 0 ? (
                 shippingOptions?.shippingoptions?.map((item) => {
                   // const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
                   // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();

@@ -59,7 +59,7 @@ const ArchivedMessages = () => {
                       >
                         <Button style={{width: '100%'}} className="btn-dim" outline color="">
                           <Icon name="mail-fill"/>
-                          <span>All (14)</span>
+                          <span>All</span>
                         </Button>
                       </Link>
                     </li>
