@@ -177,6 +177,8 @@ const Login = () => {
                     onChange={handlePassCodeChange}
                     numInputs={6}
                     type="password"
+                    // inputMode="numeric"
+                    // pattern="[0-9]*"
                     inputStyle={{border: 'none', width: '100%'}}
                     isInputSecure={true}
                     // name="passCode"

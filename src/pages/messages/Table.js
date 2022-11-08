@@ -56,8 +56,8 @@ const AllMessagesTable = () => {
         </thead>
 
         <tbody>
-          {allMessages.allMessages !== undefined ? (
-            loading ? (
+         
+            {loading ? (
               <tr className="text-center">
                 <td colSpan="7">
                   <div className="spinner-border text-primary m-5" role="status">
@@ -66,6 +66,7 @@ const AllMessagesTable = () => {
                 </td>
               </tr>
             ) : (
+              allMessages.allMessages !== undefined ? (
               allMessages?.map((item) => {
                 // const dateFormat = new Date(item?.timeSent).toLocaleDateString();
                 // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
@@ -145,31 +146,32 @@ const AllMessagesTable = () => {
                     </td> */}
                   </tr>
                 );
-              })
+              })): (
+                <tr className="text-center">
+                  <td colSpan="12">
+                    <img className="mt-5" src={emptyicon} style={{ width: "5%" }} alt="" />
+                    <br />
+                    <br />
+                    <div className="mb-5 text-center">
+                      <h6 style={{ fontWeight: 400, fontSize: 15 }}>
+                        No Messages found. Click button below to refresh.
+                        <br />
+                        <br />
+                        <Button
+                          pill
+                          className=" btn-outline-dark btn-xs btn-round"
+                          onClick={() => dispatch(getAllMessages(1, "", "", ""))}
+                        >
+                          Refresh
+                        </Button>
+                      </h6>
+                    </div>
+                  </td>
+                </tr>
+              )
             )
-          ) : (
-            <tr className="text-center">
-              <td colSpan="12">
-                <img className="mt-5" src={emptyicon} style={{ width: "5%" }} alt="" />
-                <br />
-                <br />
-                <div className="mb-5 text-center">
-                  <h6 style={{ fontWeight: 400, fontSize: 15 }}>
-                    No Messages found. Click button below to refresh.
-                    <br />
-                    <br />
-                    <Button
-                      pill
-                      className=" btn-outline-dark btn-xs btn-round"
-                      onClick={() => dispatch(getAllMessages(1, "", "", ""))}
-                    >
-                      Refresh
-                    </Button>
-                  </h6>
-                </div>
-              </td>
-            </tr>
-          )}
+            }
+            
         </tbody>
       </ReactBootStrap.Table>
       <br />
@@ -232,52 +234,50 @@ export const ArchivedTable = () => {
         </thead>
 
         <tbody>
-          {archiveMessage.archiveMessage !== undefined ? (
-            loading ? (
-              <tr className="text-center">
-                <td colSpan="7">
-                  <div className="spinner-border text-primary m-5" role="status">
-                    <span className="sr-only">Loading...</span>
-                  </div>
-                </td>
-              </tr>
-            ) : (
-              archivedMessages?.map((item) => {
-                return (
-                  <tr key={item.id}>
-                    <td>
-                      {item.archived === false ? (
-                        <Icon
-                          name="archive"
-                          style={{ color: "blue", fontSize: "1.5rem" }}
-                          onClick={() => dispatch(archiveMessage(item.id))}
-                        />
-                      ) : (
-                        <Icon
-                          name="archive"
-                          style={{ color: "purple", fontSize: "1.5rem" }}
-                          size="35"
-                          onClick={() => dispatch(unArchiveMessage(item.id))}
-                        />
-                      )}
-                    </td>
-                    <td>
-                      <div className="user-card text-center">
-                        <UserAvatar theme={item?.sender} image={item?.image}></UserAvatar> &nbsp; &nbsp;
-                        <span>{item?.sender}</span>
-                      </div>
-                    </td>
+          {loading ? (
+            <tr className="text-center">
+              <td colSpan="7">
+                <div className="spinner-border text-primary m-5" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </td>
+            </tr>
+          ) : archivedMessages.archivedMessages !== undefined ? (
+            archivedMessages?.map((item) => {
+              return (
+                <tr key={item.id}>
+                  <td>
+                    {item.archived === false ? (
+                      <Icon
+                        name="archive"
+                        style={{ color: "blue", fontSize: "1.5rem" }}
+                        onClick={() => dispatch(archiveMessage(item.id))}
+                      />
+                    ) : (
+                      <Icon
+                        name="archive"
+                        style={{ color: "purple", fontSize: "1.5rem" }}
+                        size="35"
+                        onClick={() => dispatch(unArchiveMessage(item.id))}
+                      />
+                    )}
+                  </td>
+                  <td>
+                    <div className="user-card text-center">
+                      <UserAvatar theme={item?.sender} image={item?.image}></UserAvatar> &nbsp; &nbsp;
+                      <span>{item?.sender}</span>
+                    </div>
+                  </td>
 
-                    <td>{item?.subtitle}</td>
-                    <td>
-                      <span className="text-secondary" style={{ fontWeight: 500 }}>
-                        {item?.timeSent}{" "}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })
-            )
+                  <td>{item?.subtitle}</td>
+                  <td>
+                    <span className="text-secondary" style={{ fontWeight: 500 }}>
+                      {item?.timeSent}{" "}
+                    </span>
+                  </td>
+                </tr>
+              );
+            })
           ) : (
             <tr className="text-center">
               <td colSpan="12">
@@ -359,53 +359,51 @@ export const StarredTable = () => {
         </thead>
 
         <tbody>
-          {starredMessages.starredMessages !== undefined ? (
-            loading ? (
-              <tr className="text-center">
-                <td colSpan="7">
-                  <div className="spinner-border text-primary m-5" role="status">
-                    <span className="sr-only">Loading...</span>
-                  </div>
-                </td>
-              </tr>
-            ) : (
-              starredMessages?.map((item) => {
-                // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
+          {loading ? (
+            <tr className="text-center">
+              <td colSpan="7">
+                <div className="spinner-border text-primary m-5" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </td>
+            </tr>
+          ) : starredMessages.starredMessages !== undefined ? (
+            starredMessages?.map((item) => {
+              // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
 
-                return (
-                  <tr key={item.id}>
-                    <td>
-                      {item.is_starred_by_recipient === false ? (
-                        <Icon
-                          name="star"
-                          style={{ color: "blue", fontSize: "1.5rem" }}
-                          onClick={() => dispatch(starMessage(item.id))}
-                        />
-                      ) : (
-                        <Icon
-                          name="star"
-                          style={{ color: "purple", fontSize: "1.5rem" }}
-                          size="35"
-                          onClick={() => dispatch(unStarMessage(item.id))}
-                        />
-                      )}
-                    </td>
-                    <td>
-                      <div className="user-card text-center">
-                        <UserAvatar theme={item?.sender} image={item?.sender_avatar}></UserAvatar> &nbsp; &nbsp;
-                        <span>{item?.sender}</span>
-                      </div>
-                    </td>
-                    <td>{item?.subtitle}</td>
-                    <td>
-                      <span className="text-secondary" style={{ fontWeight: 500 }}>
-                        {item?.timeSent}{" "}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })
-            )
+              return (
+                <tr key={item.id}>
+                  <td>
+                    {item.is_starred_by_recipient === false ? (
+                      <Icon
+                        name="star"
+                        style={{ color: "blue", fontSize: "1.5rem" }}
+                        onClick={() => dispatch(starMessage(item.id))}
+                      />
+                    ) : (
+                      <Icon
+                        name="star"
+                        style={{ color: "purple", fontSize: "1.5rem" }}
+                        size="35"
+                        onClick={() => dispatch(unStarMessage(item.id))}
+                      />
+                    )}
+                  </td>
+                  <td>
+                    <div className="user-card text-center">
+                      <UserAvatar theme={item?.sender} image={item?.sender_avatar}></UserAvatar> &nbsp; &nbsp;
+                      <span>{item?.sender}</span>
+                    </div>
+                  </td>
+                  <td>{item?.subtitle}</td>
+                  <td>
+                    <span className="text-secondary" style={{ fontWeight: 500 }}>
+                      {item?.timeSent}{" "}
+                    </span>
+                  </td>
+                </tr>
+              );
+            })
           ) : (
             <tr className="text-center">
               <td colSpan="12">
@@ -487,68 +485,66 @@ export const SentmessagesTable = () => {
         </thead>
 
         <tbody>
-          {sentMessages.sentMessages !== undefined ? (
-            loading ? (
-              <tr className="text-center">
-                <td colSpan="7">
-                  <div className="spinner-border text-primary m-5" role="status">
-                    <span className="sr-only">Loading...</span>
-                  </div>
-                </td>
-              </tr>
-            ) : (
-              sentMessages?.map((item) => {
-                // const dateFormat = new Date(item?.timeSent).toLocaleDateString();
-                // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
+          {loading ? (
+            <tr className="text-center">
+              <td colSpan="7">
+                <div className="spinner-border text-primary m-5" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </td>
+            </tr>
+          ) : sentMessages.sentMessages !== undefined ? (
+            sentMessages?.map((item) => {
+              // const dateFormat = new Date(item?.timeSent).toLocaleDateString();
+              // const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
 
-                return (
-                  <tr key={item.id}>
-                    <td>
-                      {item.is_archived_by_recipient === false ? (
-                        <Icon
-                          name="archive"
-                          style={{ color: "blue", fontSize: "1.5rem" }}
-                          onClick={() => dispatch(archiveMessage(item.id))}
-                        />
-                      ) : (
-                        <Icon
-                          name="archive"
-                          style={{ color: "purple", fontSize: "1.5rem" }}
-                          size="35"
-                          onClick={() => dispatch(unArchiveMessage(item.id))}
-                        />
-                      )}
-                      {item.is_starred_by_recipient === false ? (
-                        <Icon
-                          name="star"
-                          style={{ color: "blue", fontSize: "1.5rem" }}
-                          onClick={() => dispatch(starMessage(item.id))}
-                        />
-                      ) : (
-                        <Icon
-                          name="star"
-                          style={{ color: "purple", fontSize: "1.5rem" }}
-                          size="35"
-                          onClick={() => dispatch(unStarMessage(item.id))}
-                        />
-                      )}
-                    </td>
-                    <td>
-                      <div className="user-card text-center">
-                        <UserAvatar theme={item?.sender} image={item?.image}></UserAvatar> &nbsp; &nbsp;
-                        <span>{item?.sender}</span>
-                      </div>
-                    </td>
-                    <td>{item?.subtitle}</td>
-                    <td>
-                      <span className="text-secondary" style={{ fontWeight: 500 }}>
-                        {item?.timeSent}{" "}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })
-            )
+              return (
+                <tr key={item.id}>
+                  <td>
+                    {item.is_archived_by_recipient === false ? (
+                      <Icon
+                        name="archive"
+                        style={{ color: "blue", fontSize: "1.5rem" }}
+                        onClick={() => dispatch(archiveMessage(item.id))}
+                      />
+                    ) : (
+                      <Icon
+                        name="archive"
+                        style={{ color: "purple", fontSize: "1.5rem" }}
+                        size="35"
+                        onClick={() => dispatch(unArchiveMessage(item.id))}
+                      />
+                    )}
+                    {item.is_starred_by_recipient === false ? (
+                      <Icon
+                        name="star"
+                        style={{ color: "blue", fontSize: "1.5rem" }}
+                        onClick={() => dispatch(starMessage(item.id))}
+                      />
+                    ) : (
+                      <Icon
+                        name="star"
+                        style={{ color: "purple", fontSize: "1.5rem" }}
+                        size="35"
+                        onClick={() => dispatch(unStarMessage(item.id))}
+                      />
+                    )}
+                  </td>
+                  <td>
+                    <div className="user-card text-center">
+                      <UserAvatar theme={item?.sender} image={item?.image}></UserAvatar> &nbsp; &nbsp;
+                      <span>{item?.sender}</span>
+                    </div>
+                  </td>
+                  <td>{item?.subtitle}</td>
+                  <td>
+                    <span className="text-secondary" style={{ fontWeight: 500 }}>
+                      {item?.timeSent}{" "}
+                    </span>
+                  </td>
+                </tr>
+              );
+            })
           ) : (
             <tr className="text-center">
               <td colSpan="12">
