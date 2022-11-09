@@ -175,6 +175,7 @@ const AllMessagesTable = () => {
         </tbody>
       </ReactBootStrap.Table>
       <br />
+      {allMessages.length !== 0 &&
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -197,7 +198,7 @@ const AllMessagesTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      /> }
     </div>
   );
 };

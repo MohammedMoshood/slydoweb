@@ -118,6 +118,7 @@ const ContactsTable = () => {
       </tbody>
       </ReactBootStrap.Table>
       <br/>
+      {contacts.contacts !== undefined &&
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -140,7 +141,7 @@ const ContactsTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      />}
     </div>
   
   );

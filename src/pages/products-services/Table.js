@@ -295,6 +295,7 @@ export const ProductsTable = () => {
           </tbody>
         </ReactBootStrap.Table>
         <br/>
+      {  products.products !== undefined &&
         <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -316,7 +317,7 @@ export const ProductsTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      />
+      />}
       </div>
     )
 };
