@@ -305,7 +305,8 @@ export const BlockedContactsTable = () => {
         }
       </tbody>
       </ReactBootStrap.Table>
-      {/* <br/>
+      <br/>
+     { blockedcontacts.blockcontact !== undefined && 
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -328,7 +329,7 @@ export const BlockedContactsTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      /> */}
+      />}
     </div>
   
   );

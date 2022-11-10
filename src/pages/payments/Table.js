@@ -18,7 +18,7 @@ import { Badge } from "reactstrap";
 import { UserAvatar, Icon, Button } from "../../slydo-components/Component";
 import { PaymentRequestsModal } from "./ModalData";
 // import { findUpper } from "../../utils/Utils";
-import emptyicon from "../../images/icons/empty-folder.png"
+import emptyicon from "../../images/icons/empty-folder.png";
 
 //Transaction Table
 const TransactionsTable = () => {
@@ -130,59 +130,60 @@ const TransactionsTable = () => {
                     <td>{item?.description}</td>
                     {/* <td>{item?.paid === true ? "Paid" : "Not paid"}</td> */}
                   </tr>
-                 
                 </>
               );
             })
-          ) : ( 
-          <tr className="text-center">
-            <td colSpan="12">
-              <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
-              <br />
-              <br />
-              <div className="mb-5 text-center">
-                <h6 style={{ fontWeight: 400, fontSize: 15 }}>
-                  No Transactions found. Click button below to refresh.
-                  <br />
-                  <br />
-                  <Button
-                    pill
-                    className=" btn-outline-dark btn-xs btn-round"
-                    onClick={() => dispatch(getTransactions(1, "", "", ""))}
-                  >
-                    Refresh
-                  </Button>
-                </h6>
-              </div>
-            </td>
-        </tr>)
-        }
+          ) : (
+            <tr className="text-center">
+              <td colSpan="12">
+                <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
+                <br />
+                <br />
+                <div className="mb-5 text-center">
+                  <h6 style={{ fontWeight: 400, fontSize: 15 }}>
+                    No Transactions found. Click button below to refresh.
+                    <br />
+                    <br />
+                    <Button
+                      pill
+                      className=" btn-outline-dark btn-xs btn-round"
+                      onClick={() => dispatch(getTransactions(1, "", "", ""))}
+                    >
+                      Refresh
+                    </Button>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+          )}
         </tbody>
       </ReactBootStrap.Table>
-      {/* <br /> */}
-      {/* <ReactPaginate
-        previousLabel="Previous"
-        nextLabel="Next"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
-        breakLabel="..."
-        breakClassName="page-item"
-        breakLinkClassName="page-link"
-        pageCount={Math.round(payments?.count / 10)}
-        // pageCount={Math.round(orders?.count/orders?.orders?.length)}
-        pageRange={2}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
-        onPageChange={handlePageClick}
-        containerClassName="pagination"
-        subContainerClassName={"pages pagination"}
-        activeClassName="active"
-        forcePage={pageOffset}
-      /> */}
+      <br />
+      {payments.payments !== undefined && (
+        <ReactPaginate
+          previousLabel="Previous"
+          nextLabel="Next"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
+          previousClassName="page-item"
+          previousLinkClassName="page-link"
+          nextClassName="page-item"
+          nextLinkClassName="page-link"
+          breakLabel="..."
+          breakClassName="page-item"
+          breakLinkClassName="page-link"
+          pageCount={Math.round(payments?.count / 10)}
+          // pageCount={Math.round(orders?.count/orders?.orders?.length)}
+          pageRange={2}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName="pagination"
+          subContainerClassName={"pages pagination"}
+          activeClassName="active"
+          forcePage={pageOffset}
+        />
+      )}
     </div>
   );
 };
@@ -227,7 +228,7 @@ export const PaymentRequestTable = () => {
                 </div>
               </td>
             </tr>
-          ) :  paymentRequest.paymentRequest !== undefined ? (
+          ) : paymentRequest.paymentrequest !== undefined ? (
             paymentRequest?.paymentrequest?.map((item) => {
               const dateFormat = new Date(item?.dateAndTime).toLocaleDateString();
               const timeFormat = new Date(item?.dateAndTime).toLocaleTimeString();
@@ -279,18 +280,24 @@ export const PaymentRequestTable = () => {
                 </tr>
               );
             })
-          )  : (
+          ) : (
             <tr className="text-center">
               <td colSpan="12">
-                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
-                <br/>
-                <br/>
+                <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
+                <br />
+                <br />
                 <div className="mb-5 text-center">
-                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                  <h6 style={{ fontWeight: 400, fontSize: 15 }}>
                     No Payment Requests found. Click button below to refresh.
-                    <br/>
-                    <br/>
-                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getPaymentRequest(1, "", "", ""))}>Refresh</Button>
+                    <br />
+                    <br />
+                    <Button
+                      pill
+                      className=" btn-outline-dark btn-xs btn-round"
+                      onClick={() => dispatch(getPaymentRequest(1, "", "", ""))}
+                    >
+                      Refresh
+                    </Button>
                   </h6>
                 </div>
               </td>
@@ -298,30 +305,32 @@ export const PaymentRequestTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      {/* <br />
-      <ReactPaginate
-        previousLabel="Previous"
-        nextLabel="Next"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
-        breakLabel="..."
-        breakClassName="page-item"
-        breakLinkClassName="page-link"
-        pageCount={Math.round(paymentRequest.count / 10)}
-        // pageCount={Math.round(orders?.count/orders?.orders?.length)}
-        pageRange={2}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
-        onPageChange={handlePageClick}
-        containerClassName="pagination"
-        subContainerClassName={"pages pagination"}
-        activeClassName="active"
-        forcePage={pageOffset}
-      /> */}
+      <br />
+      {paymentRequest.paymentrequest !== undefined && (
+        <ReactPaginate
+          previousLabel="Previous"
+          nextLabel="Next"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
+          previousClassName="page-item"
+          previousLinkClassName="page-link"
+          nextClassName="page-item"
+          nextLinkClassName="page-link"
+          breakLabel="..."
+          breakClassName="page-item"
+          breakLinkClassName="page-link"
+          pageCount={Math.round(paymentRequest?.count / 10)}
+          // pageCount={Math.round(orders?.count/orders?.orders?.length)}
+          pageRange={2}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName="pagination"
+          subContainerClassName={"pages pagination"}
+          activeClassName="active"
+          forcePage={pageOffset}
+        />
+      )}
     </div>
   );
 };
@@ -405,15 +414,21 @@ export const PayoutTable = () => {
           ) : (
             <tr className="text-center">
               <td colSpan="12">
-                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
-                <br/>
-                <br/>
+                <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
+                <br />
+                <br />
                 <div className="mb-5 text-center">
-                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                  <h6 style={{ fontWeight: 400, fontSize: 15 }}>
                     No Payouts found. Click button below to refresh.
-                    <br/>
-                    <br/>
-                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getPayouts(1, "", "", ""))}>Refresh</Button>
+                    <br />
+                    <br />
+                    <Button
+                      pill
+                      className=" btn-outline-dark btn-xs btn-round"
+                      onClick={() => dispatch(getPayouts(1, "", "", ""))}
+                    >
+                      Refresh
+                    </Button>
                   </h6>
                 </div>
               </td>
@@ -422,29 +437,31 @@ export const PayoutTable = () => {
         </tbody>
       </ReactBootStrap.Table>
       <br />
-      {/* <ReactPaginate
-        previousLabel="Previous"
-        nextLabel="Next"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
-        breakLabel="..."
-        breakClassName="page-item"
-        breakLinkClassName="page-link"
-        pageCount={Math.round(payouts.count / 10)}
-        // pageCount={Math.round(orders?.count/orders?.orders?.length)}
-        pageRange={2}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
-        onPageChange={handlePageClick}
-        containerClassName="pagination"
-        subContainerClassName={"pages pagination"}
-        activeClassName="active"
-        forcePage={pageOffset}
-      /> */}
+      {payouts.payouts !== undefined && (
+        <ReactPaginate
+          previousLabel="Previous"
+          nextLabel="Next"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
+          previousClassName="page-item"
+          previousLinkClassName="page-link"
+          nextClassName="page-item"
+          nextLinkClassName="page-link"
+          breakLabel="..."
+          breakClassName="page-item"
+          breakLinkClassName="page-link"
+          pageCount={Math.round(payouts?.count / 10)}
+          // pageCount={Math.round(orders?.count/orders?.orders?.length)}
+          pageRange={2}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName="pagination"
+          subContainerClassName={"pages pagination"}
+          activeClassName="active"
+          forcePage={pageOffset}
+        />
+      )}
     </div>
   );
 };
@@ -564,15 +581,21 @@ export const InvoiceTable = () => {
           ) : (
             <tr className="text-center">
               <td colSpan="12">
-                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
-                <br/>
-                <br/>
+                <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
+                <br />
+                <br />
                 <div className="mb-5 text-center">
-                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                  <h6 style={{ fontWeight: 400, fontSize: 15 }}>
                     No Invoice found. Click button below to refresh.
-                    <br/>
-                    <br/>
-                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getInvoice(1, "", "", ""))}>Refresh</Button>
+                    <br />
+                    <br />
+                    <Button
+                      pill
+                      className=" btn-outline-dark btn-xs btn-round"
+                      onClick={() => dispatch(getInvoice(1, "", "", ""))}
+                    >
+                      Refresh
+                    </Button>
                   </h6>
                 </div>
               </td>
@@ -580,6 +603,32 @@ export const InvoiceTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
+      <br />
+      {invoice.invoice !== undefined && (
+        <ReactPaginate
+          previousLabel="Previous"
+          nextLabel="Next"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
+          previousClassName="page-item"
+          previousLinkClassName="page-link"
+          nextClassName="page-item"
+          nextLinkClassName="page-link"
+          breakLabel="..."
+          breakClassName="page-item"
+          breakLinkClassName="page-link"
+          pageCount={Math.round(invoice?.count / 10)}
+          // pageCount={Math.round(orders?.count/orders?.orders?.length)}
+          pageRange={2}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName="pagination"
+          subContainerClassName={"pages pagination"}
+          activeClassName="active"
+          forcePage={pageOffset}
+        />
+      )}
     </div>
   );
 };
@@ -674,18 +723,24 @@ export const PaymentContractTable = () => {
                 </tr>
               );
             })
-          )  : (
+          ) : (
             <tr className="text-center">
               <td colSpan="12">
-                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
-                <br/>
-                <br/>
+                <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
+                <br />
+                <br />
                 <div className="mb-5 text-center">
-                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                  <h6 style={{ fontWeight: 400, fontSize: 15 }}>
                     No Payment Contract found. Click button below to refresh.
-                    <br/>
-                    <br/>
-                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getPaymentRequest(1, "", "", ""))}>Refresh</Button>
+                    <br />
+                    <br />
+                    <Button
+                      pill
+                      className=" btn-outline-dark btn-xs btn-round"
+                      onClick={() => dispatch(getPaymentContract(1, "", "", ""))}
+                    >
+                      Refresh
+                    </Button>
                   </h6>
                 </div>
               </td>
@@ -693,30 +748,32 @@ export const PaymentContractTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      {/* <br />
-      <ReactPaginate
-        previousLabel="Previous"
-        nextLabel="Next"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
-        breakLabel="..."
-        breakClassName="page-item"
-        breakLinkClassName="page-link"
-        pageCount={Math.round(paymentRequest.count / 10)}
-        // pageCount={Math.round(orders?.count/orders?.orders?.length)}
-        pageRange={2}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
-        onPageChange={handlePageClick}
-        containerClassName="pagination"
-        subContainerClassName={"pages pagination"}
-        activeClassName="active"
-        forcePage={pageOffset}
-      /> */}
+      <br />
+      {paymentContract.paymentContract !== undefined && (
+        <ReactPaginate
+          previousLabel="Previous"
+          nextLabel="Next"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
+          previousClassName="page-item"
+          previousLinkClassName="page-link"
+          nextClassName="page-item"
+          nextLinkClassName="page-link"
+          breakLabel="..."
+          breakClassName="page-item"
+          breakLinkClassName="page-link"
+          pageCount={Math.round(paymentContract?.count / 10)}
+          // pageCount={Math.round(orders?.count/orders?.orders?.length)}
+          pageRange={2}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName="pagination"
+          subContainerClassName={"pages pagination"}
+          activeClassName="active"
+          forcePage={pageOffset}
+        />
+      )}
     </div>
   );
 };
@@ -775,15 +832,21 @@ export const BankAccountTable = () => {
           ) : (
             <tr className="text-center">
               <td colSpan="12">
-                <img className="mt-5" src={emptyicon} style={{width: '4%'}} alt="" />
-                <br/>
-                <br/>
+                <img className="mt-5" src={emptyicon} style={{ width: "4%" }} alt="" />
+                <br />
+                <br />
                 <div className="mb-5 text-center">
-                  <h6 style={{fontWeight: 400, fontSize: 15}}>
+                  <h6 style={{ fontWeight: 400, fontSize: 15 }}>
                     No Bank Accounts found. Click button below to refresh.
-                    <br/>
-                    <br/>
-                    <Button pill className=" btn-outline-dark btn-xs btn-round" onClick={() => dispatch(getBankAccounts(1, "", "", ""))}>Refresh</Button>
+                    <br />
+                    <br />
+                    <Button
+                      pill
+                      className=" btn-outline-dark btn-xs btn-round"
+                      onClick={() => dispatch(getBankAccounts(1, "", "", ""))}
+                    >
+                      Refresh
+                    </Button>
                   </h6>
                 </div>
               </td>
@@ -791,7 +854,8 @@ export const BankAccountTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      {/* <br />
+      <br />
+     { bankAccounts.bankAccounts !== undefined &&
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -814,7 +878,7 @@ export const BankAccountTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      /> */}
+      /> }
     </div>
   );
 };

@@ -180,8 +180,9 @@ export const getSentMessages = () => async (dispatch) => {
       const sentmessages = response.data.results.map((ob) => ({
         // xname: ob.full_name,
         archived: ob?.is_archived_by_recipient,
-        username: ob.sender,
-        image: ob.sender_avatar,
+        // recipient: ob?.recipient,
+        username: ob.recipient,
+        image: ob.recipient_avatar,
         subtitle: ob?.subtitle,
         timeSent: ob?.time_sent
       }));

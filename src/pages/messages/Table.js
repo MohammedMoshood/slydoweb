@@ -304,7 +304,8 @@ export const ArchivedTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      {/* <br />
+    <br />
+ {   archivedMessages.length !== 0 && 
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -327,7 +328,7 @@ export const ArchivedTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      /> */}
+      />}
     </div>
   );
 };
@@ -430,7 +431,8 @@ export const StarredTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      {/* <br />
+      <br />
+    {  starredMessages.length !== 0 && 
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -453,7 +455,7 @@ export const StarredTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      /> */}
+      />}
     </div>
   );
 };
@@ -479,7 +481,7 @@ export const SentmessagesTable = () => {
       <ReactBootStrap.Table striped bordered hover>
         <thead>
           {/* <th>#</th> */}
-          <th>Star </th>
+          {/* <th>Sender </th> */}
           <th>Recipient</th>
           <th>Title</th>
           <th>Date</th>
@@ -501,7 +503,7 @@ export const SentmessagesTable = () => {
 
               return (
                 <tr key={item.id}>
-                  <td>
+                  {/* <td>
                     {item.is_archived_by_recipient === false ? (
                       <Icon
                         name="archive"
@@ -530,13 +532,14 @@ export const SentmessagesTable = () => {
                         onClick={() => dispatch(unStarMessage(item.id))}
                       />
                     )}
-                  </td>
+                  </td> */}
                   <td>
                     <div className="user-card text-center">
-                      <UserAvatar theme={item?.sender} image={item?.image}></UserAvatar> &nbsp; &nbsp;
-                      <span>{item?.sender}</span>
+                      <UserAvatar theme={item?.username} image={item?.image}></UserAvatar> &nbsp; &nbsp;
+                      <span>{item?.username}</span>
                     </div>
                   </td>
+                  {/* <td>{item?.recipient}</td> */}
                   <td>{item?.subtitle}</td>
                   <td>
                     <span className="text-secondary" style={{ fontWeight: 500 }}>
@@ -571,7 +574,8 @@ export const SentmessagesTable = () => {
           )}
         </tbody>
       </ReactBootStrap.Table>
-      {/* <br />
+      <br />
+    {  sentMessages.length !== 0 &&
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -594,7 +598,7 @@ export const SentmessagesTable = () => {
         subContainerClassName={"pages pagination"}
         activeClassName="active"
         forcePage={pageOffset}
-      /> */}
+      />}
     </div>
   );
 };
