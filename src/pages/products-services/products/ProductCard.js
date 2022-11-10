@@ -98,7 +98,7 @@ const ProductCard = () => {
 
   // Changing state value when searching name
 
-  const filteredObject = products.filter((item) => {
+  const filteredObject = products?.products?.filter((item) => {
           return item.name.toLowerCase().includes(filter.toLowerCase());
         });
   // useEffect(() => {
@@ -146,7 +146,7 @@ const ProductCard = () => {
   // Get current list, pagination
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
-  const currentItems = filteredObject.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredObject?.slice(indexOfFirstItem, indexOfLastItem);
 
   // Change Page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -242,7 +242,7 @@ const ProductCard = () => {
         </BlockHead>
         <Block>
           <Row className="g-gs">
-            {currentItems.length > 0 ? (
+            {currentItems?.length > 0 ? (
               currentItems.map((item) => {
                 // console.log(item, "each item")
                 return (
@@ -311,7 +311,7 @@ const ProductCard = () => {
               <div className="ml-2">No product found</div>
             )}
           </Row>
-          {currentItems.length > 0 && (
+          {currentItems?.length > 0 && (
             <div className="mt-3">
               <PaginationComponent
                 itemPerPage={itemPerPage}
