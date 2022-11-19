@@ -22,6 +22,9 @@ import InvoicePrint from "./pages/pre-built/invoice/InvoicePrint";
 import FrontPage from "./pages/FrontPage";
 import UnderConstruction from "./pages/UnderConstruction";
 import { NavProvider } from "./context/Context";
+import Chat from "./pages/FrontPage/Chat";
+import Developers from "./pages/FrontPage/Developers";
+import Business from "./pages/FrontPage/Business";
 
 const App = (props) => {
   return (
@@ -29,9 +32,10 @@ const App = (props) => {
       {/* Front Page */}
       
         <Route exact path="/" component={FrontPage} />
-        <Route exact path="/chat" component={UnderConstruction} />
+        <Route exact path="/chat" component={Chat} />
         <Route exact path="/socials" component={UnderConstruction} />
-        <Route exact path="/business" component={UnderConstruction} />
+        <Route exact path="/business" component={Business} />
+        <Route exact path="/developers" component={Developers} />
         <Route exact path="/features" component={UnderConstruction} />
         <Route exact path="/pricing" component={UnderConstruction} />
         <Route exact path="/support" component={UnderConstruction} />

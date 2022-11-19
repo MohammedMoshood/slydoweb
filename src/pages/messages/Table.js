@@ -105,13 +105,13 @@ const AllMessagesTable = () => {
                     </td>
                     <td>
                       <div className="user-card text-center">
-                        <UserAvatar theme={item?.sender} image={item?.sender_avatar}></UserAvatar> &nbsp; &nbsp;
+                        <UserAvatar theme={item?.sender} image={item?.sender_image}></UserAvatar> &nbsp; &nbsp;
                         <span>{item?.sender}</span>
                       </div>
                     </td>
                     <td>
                       <div className="user-card text-center">
-                        <UserAvatar theme={item?.recipient} image={item?.recipient_avatar}></UserAvatar> &nbsp; &nbsp;
+                        <UserAvatar theme={item?.recipient} image={item?.recipient_image}></UserAvatar> &nbsp; &nbsp;
                         <span>{item?.recipient}</span>
                       </div>
                     </td>
@@ -393,7 +393,7 @@ export const StarredTable = () => {
                   </td>
                   <td>
                     <div className="user-card text-center">
-                      <UserAvatar theme={item?.sender} image={item?.sender_avatar}></UserAvatar> &nbsp; &nbsp;
+                      <UserAvatar theme={item?.sender} image={item?.sender_image}></UserAvatar> &nbsp; &nbsp;
                       <span>{item?.sender}</span>
                     </div>
                   </td>

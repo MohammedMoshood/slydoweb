@@ -92,7 +92,7 @@ export const getStarredMessages = () => async(dispatch) => {
         id : ob?.id,
         archived: ob?.is_archived_by_recipient,
         username: ob.sender,
-        image: ob.sender_avatar,
+        sender_image: ob.sender_avatar,
         subtitle: ob?.subtitle,
         timeSent: ob?.time_sent
       }));

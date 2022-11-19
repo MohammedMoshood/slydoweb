@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Sidebar from "../components/FrontPage/Sidebar";
+import Sidebar from "../components/FrontPage/FrontPage/Sidebar";
 import Navbar from "../components/Navbar";
 
 import ErrorImage from "../images/UnderConstruct.svg";
@@ -99,7 +99,7 @@ const FeatureText = styled.p`
 
 const ConstructionDiv = styled.div`
   width: 84%;
-  max-width: 1400px;
+  max-width: 1050px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -129,7 +129,7 @@ const UnderConstruction = () => {
           justifyContent: "flex-end",
         }}
       >
-        <ConstructionDiv style={{}}>
+        <ConstructionDiv >
           <LeftDiv>
             <FeatureDiv>
               <TopDiv>

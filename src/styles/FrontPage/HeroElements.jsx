@@ -40,7 +40,6 @@ export const HeroLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 1050px;
   width: 50%;
 
   @media screen and (max-width: 768px) {

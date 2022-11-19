@@ -15,8 +15,8 @@ import {
   MenuDiv,
   MenuBars,
 } from "../styles/NavbarElements";
-import Navmenu from "./FrontPage/Navmenu";
-import { UserDropdown } from "./FrontPage/UserDropdown";
+import Navmenu from "./FrontPage/FrontPage/Navmenu";
+import { UserDropdown } from "./FrontPage/FrontPage/UserDropdown";
 const Navbar = () => {
   const user = localStorage.getItem("accessToken");
   const slydouser = JSON.parse(user);
@@ -46,7 +46,7 @@ const Navbar = () => {
             <NavLink href="/business">Business</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink target="_blank" href="https://developer.slydo.co">
+            <NavLink href="/developers">
               Developers
             </NavLink>
           </NavItem>

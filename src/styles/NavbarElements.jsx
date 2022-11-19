@@ -20,7 +20,6 @@ export const Nav = styled.nav`
     justify-content: center;
     top: 0;
     z-index: 10;
-
     border-bottom: 0.1px solid #e2e2e2;
   }
 `;
@@ -31,8 +30,8 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  max-width: 1400px;
-  width: 84%;
+  max-width: 1050px;
+  width: 80%;
 
   @media screen and (max-width: 768px) {
     height: 40px;
