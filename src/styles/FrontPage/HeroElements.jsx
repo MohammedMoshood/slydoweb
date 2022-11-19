@@ -89,11 +89,11 @@ export const FeaturesDiv = styled.div`
   flex-direction: row;
   padding: 0px;
   flex-wrap: wrap;
-
   justify-content: space-between;
   @media screen and (max-width: 768px) {
     width: 125%;
   }
+
 `;
 export const SingleFeature = styled.div`
   width: 250px;
