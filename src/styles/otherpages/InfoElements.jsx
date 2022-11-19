@@ -24,6 +24,11 @@ export const InfoContainer = styled.div`
 
 export const InfoHead = styled.h4`
   color: #1a191e;
+  font-weight: 500;
+  @media screen and (max-width: 768px) {
+    font-weight: 500;
+    font-size: 30px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -32,10 +37,9 @@ export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 33px;
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     padding: 20px 0;
   }
-  
 `;
 export const SingleCardDiv = styled.div`
   width: 31%;
@@ -80,7 +84,7 @@ export const SingleDiv = styled.div`
   width: 31%;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -89,7 +93,6 @@ export const CardB = styled.div`
   padding: 90px 0;
   background-color: #f5f6f8;
   border-radius: 10px;
-  @media screen and (max-width:768px) {
-    
+  @media screen and (max-width: 768px) {
   }
 `;

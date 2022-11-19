@@ -92,7 +92,6 @@ export const HeroButton = styled.a`
   display: grid;
   place-items: center;
   transition: 0.2s all;
-  margin: 0 auto;
   cursor: pointer;
   p {
     color: #fff;
@@ -100,5 +99,8 @@ export const HeroButton = styled.a`
   }
   &:hover {
     background-color: #94b0dc;
+  }
+  @media screen and (max-width:768px) {
+  margin: 0 auto;
   }
 `;
