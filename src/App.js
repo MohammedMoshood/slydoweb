@@ -25,6 +25,7 @@ import { NavProvider } from "./context/Context";
 import Chat from "./pages/FrontPage/Chat";
 import Developers from "./pages/FrontPage/Developers";
 import Business from "./pages/FrontPage/Business";
+import Socials from "./pages/FrontPage/Socials";
 
 const App = (props) => {
   return (
@@ -33,7 +34,7 @@ const App = (props) => {
       
         <Route exact path="/" component={FrontPage} />
         <Route exact path="/chat" component={Chat} />
-        <Route exact path="/socials" component={UnderConstruction} />
+        <Route exact path="/socials" component={Socials} />
         <Route exact path="/business" component={Business} />
         <Route exact path="/developers" component={Developers} />
         <Route exact path="/features" component={UnderConstruction} />
